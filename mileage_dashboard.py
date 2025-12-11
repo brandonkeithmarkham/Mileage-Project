@@ -66,7 +66,7 @@ st.caption(f"Logged in as: {st.user.email}")
 # ---------------------------
 ALLOWED_EMAILS = {
     "brandonkeithmarkham@gmail.com",
-    "friend_email@gmail.com",
+    "laura.miggins@gmail.com",
     # add others here
 }
 
