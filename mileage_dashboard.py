@@ -65,7 +65,7 @@ st.caption(f"Logged in as: {st.user.email}")
 # Authorization (whitelist)
 # ---------------------------
 ALLOWED_EMAILS = {
-    "your_email@gmail.com",
+    "brandonkeithmarkham@gmail.com",
     "friend_email@gmail.com",
     # add others here
 }
