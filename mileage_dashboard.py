@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 import io
+import xlsxwriter
 import mileage_process as mp  # your existing script
 
 # ---------------------------
@@ -114,13 +115,14 @@ def load_data():
 # ---------------------------
 def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
     """
-    Create an in-memory Excel file with:
-      - 'Summary' sheet: aggregated mileage by vehicle
-      - 'Details' sheet: all prepared rows
-
-    Mirrors the structure of mileage_report.xlsx from mileage_process.py.
+    Creates a master Excel workbook with clear formatting using xlsxwriter:
+    - Auto-fit columns
+    - Header styling (bold + yellow fill)
+    - Borders on all cells
+    - Frozen header row
     """
-    # Match the column renames used in save_outputs()
+
+    # Rename columns for consistency
     summary_export = summary.rename(
         columns={
             "Commute_Miles": "Commute Miles",
@@ -130,23 +132,51 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
     )
 
     buffer = io.BytesIO()
-    with pd.ExcelWriter(buffer, engine="xlsxwriter") as writer:
-        # Summary sheet
-        summary_export.reset_index().to_excel(writer, sheet_name="Summary", index=False)
 
-        # Details sheet
-        details_view = df.copy()
-        # Make the helper columns nicer, like in mileage_process.py
-        details_view = details_view.rename(
-            columns={
-                "_is_commute": "Is_Commute",
-                "_row_ok": "Row_OK",
-            }
-        )
-        details_view.to_excel(writer, index=False, sheet_name="Details")
+    # Use xlsxwriter engine
+    with pd.ExcelWriter(buffer, engine="xlsxwriter") as writer:
+        # Write worksheets
+        summary_export.reset_index().to_excel(writer, sheet_name="Summary", index=False)
+        df.to_excel(writer, sheet_name="Details", index=False)
+
+        workbook = writer.book
+        header_format = workbook.add_format({
+            "bold": True,
+            "bg_color": "#FFFF99",
+            "border": 1
+        })
+        cell_format = workbook.add_format({
+            "border": 1
+        })
+
+        # Format both sheets in same way
+        for sheet_name in ["Summary", "Details"]:
+            worksheet = writer.sheets[sheet_name]
+
+            # Freeze the first row
+            worksheet.freeze_panes(1, 0)
+
+            # Get dataframe for this sheet
+            data = summary_export.reset_index() if sheet_name == "Summary" else df
+            n_rows, n_cols = data.shape
+
+            # Apply formatting to header
+            for col_idx, col_name in enumerate(data.columns):
+                worksheet.write(0, col_idx, col_name, header_format)
+
+            # Apply borders + compute column widths
+            for col_idx, col_name in enumerate(data.columns):
+                column_width = max(len(str(col_name)), 8)
+                for row_idx in range(1, n_rows + 1):
+                    cell_value = data.iloc[row_idx - 1, col_idx]
+                    worksheet.write(row_idx, col_idx, cell_value, cell_format)
+                    column_width = max(column_width, len(str(cell_value)))
+
+                worksheet.set_column(col_idx, col_idx, column_width + 2)
 
     buffer.seek(0)
     return buffer
+
 
 
 def main():
