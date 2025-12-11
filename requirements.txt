@@ -2,3 +2,4 @@ streamlit[auth]==1.52.1
 pandas>=2.0
 matplotlib>=3.8
 Authlib>=1.3.2
+XlsxWriter>=3.1
