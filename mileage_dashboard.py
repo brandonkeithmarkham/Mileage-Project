@@ -29,7 +29,21 @@ st.set_page_config(
     page_title="Mileage Dashboard",
     layout="wide",
 )
+# ---------------------------
+# Authentication gate
+# ---------------------------
+if not st.user.is_logged_in:
+    st.title("🚗 Mileage Dashboard")
+    st.write("Please log in to access this app.")
 
+    # Uses the [auth] config from your Streamlit secrets
+    if st.button("Log in with Google"):
+        st.login()  # default provider from [auth]
+
+    st.stop()  # Don't run the rest of the app for anonymous users
+
+# Optional: show who is logged in
+st.caption(f"Logged in as: {st.user.email}")
 
 # ---------------------------
 # Data loading using your code
