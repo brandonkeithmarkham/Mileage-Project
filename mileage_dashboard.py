@@ -89,7 +89,7 @@ def load_data():
             # If one sheet is broken, skip it but log a warning in the UI later
             # You could also collect these errors in a list if you want.
             continue
-
+        tmp.columns = tmp.columns.str.strip()    
         # Tag each row with the driver name
         tmp["Driver"] = driver_name
         frames.append(tmp)
