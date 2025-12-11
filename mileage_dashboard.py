@@ -151,6 +151,8 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
 def main():
     st.title("🚗 Mileage Dashboard")
+    if st.button("🔄 Refresh data now"):
+        st.cache_data.clear()
 
     # Try to load data; show a friendly error if no files are found
     try:
