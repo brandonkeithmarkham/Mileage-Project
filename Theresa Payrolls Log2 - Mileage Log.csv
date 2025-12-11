@@ -1,0 +1,792 @@
+Date,Vehicle,Start Mileage ,End Mileage,Total Mileage,Mileage Type
+11/19/2025,Emily,30688,30695,7,Commute
+11/19/2025,Emily,30677,30688,11,Lisa F.
+11/19/2025,Emily,30657,30677,20,Travel
+11/19/2025,Emily,30695,30720,25,Helen
+11/19/2025,Emily,30629,30657,28,Buy stuff for holiday granola+ commute
+11/18/2025,Emily,30580,30590,10,Commute
+11/18/2025,Emily,30619,30629,10,Stephen H. - Alyssa attending
+11/18/2025,Emily,30590,30619,29,Commute
+11/17/2025,Emily,30447,30448,1,Commute - Emily Kia
+11/17/2025,Emily,30479,30480,1,Daryl
+11/17/2025,Emily,30442,30447,5,Travel
+11/17/2025,Emily,30458,30465,7,Chris L. 
+11/17/2025,Emily,30480,30487,7,Travel
+11/17/2025,Emily,30554,30561,7,Daryl
+11/17/2025,Emily,30487,30495,8,Travel + gas
+11/17/2025,Emily,30505,30514,9,Chris L. 
+11/17/2025,Emily,30448,30458,10,errand 
+11/17/2025,Emily,30495,30505,10,Travel
+11/17/2025,Emily,30465,30479,14,Gary
+11/17/2025,Emily,30537,30554,17,Travel
+11/17/2025,Emily,30561,30580,19,Barbara/Matthew
+11/17/2025,Emily,30514,30537,23,Commute
+11/14/2025,Emily,30272,30276,4,Commute
+11/14/2025,Emily,30267,30272,5,Stephen - CAPS
+11/14/2025,Emily,30276,30282,6,break
+11/14/2025,Emily,30282,30289,7,Travel 
+11/14/2025,Emily,47244,47262,18,Leo /Rosa - switch to Adrienne Kia
+11/14/2025,Emily,47222,47244,22,Commute 
+11/12/2025,Emily,30238,30242,4,Commute
+11/12/2025,Emily,30205,30212,7,"Doug R. *1st ride, CG ride along "
+11/12/2025,Emily,30212,30220,8,Travel to CP
+11/12/2025,Emily,30220,30238,18,Helen
+11/12/2025,Emily,30242,30267,25,Commute + gas
+11/11/2025,Emily,30174,30175,1,*1st ride Roger/Carol
+11/11/2025,Emily,30147,30149,2,Travel
+11/11/2025,Emily,30161,30163,2,Andrew/Hope
+11/11/2025,Emily,30158,30161,3,Travel + wait 15min to pick up Carol 
+11/11/2025,Emily,30154,30158,4,Carol/Laurie
+11/11/2025,Emily,30182,30186,4,Travel
+11/11/2025,Emily,30186,30190,4,Andrew/Hope
+11/11/2025,Emily,30142,30147,5,Commute
+11/11/2025,Emily,30149,30154,5,Home to get transport chair for Marilyn
+11/11/2025,Emily,30175,30182,7,Travel
+11/11/2025,Emily,30163,30174,11,*1st ride - Marilyn (Cassie aunt) to get new power chair/swap out with Scott
+11/11/2025,Emily,30130,30142,12,Travel 
+11/11/2025,Emily,30190,30205,15,Carol/Laurie
+11/11/2025,Emily,30109,30130,21,Commute
+11/10/2025,Emily,29987,29988,1,Commute
+11/10/2025,Emily,29996,30003,7,Chris L. 
+11/10/2025,Emily,30093,30100,7,Travel
+11/10/2025,Emily,29966,29974,8,Daryl
+11/10/2025,Emily,29988,29996,8,Travel
+11/10/2025,Emily,30018,30026,8,Chris
+11/10/2025,Emily,30100,30109,9,Travel / gas
+11/10/2025,Emily,29956,29966,10,Helen
+11/10/2025,Emily,29974,29987,13,Travel
+11/10/2025,Emily,30026,30040,14,Dick
+11/10/2025,Emily,30003,30018,15,Travel
+11/10/2025,Emily,30071,30093,22,Martin C. + CG *1st ride - send invoice to daughter email
+11/10/2025,Emily,30040,30071,31,Commute
+11/7/2025,Emily,29950,29956,6,Commute
+11/7/2025,Emily,29924,29936,12,Juan P. - one way
+11/7/2025,Emily,29936,29950,14,Commute
+11/5/2025,Emily,29797,29812,15,Dollar store holiday errand for Elderwheels and drop off @ Elsa's 
+11/5/2025,Emily,29891,29924,33,Travel to Gtown 
+11/5/2025,Emily,29812,29846,34,Jennie
+11/5/2025,Emily,29846,29891,45,Commute
+11/3/2025,Emily,29725,29730,5,Commute
+11/3/2025,Emily,29750,29755,5,Mike M.
+11/3/2025,Emily,29789,29797,8,gas
+11/3/2025,Emily,29755,29765,10,Travel
+11/3/2025,Emily,29730,29750,20,Gary
+11/3/2025,Emily,29765,29789,24,Commute
+10/31/2025,Emily,29675,29695,20,Commute
+10/31/2025,Emily,29647,29675,28,Lisa 
+10/31/2025,Emily,29695,29725,30,Commute 
+10/29/2025,Emily,29470,29480,10,Commute
+10/29/2025,Emily,29480,29491,11,Lisa F.
+10/29/2025,Emily,29456,29470,14,Commute home for break
+10/29/2025,Emily,29406,29426,20,Travel 
+10/29/2025,Emily,29426,29456,30,Mr. Sanjar
+10/29/2025,Emily,29365,29406,41,Commute
+10/28/2025,Emily,29330,29346,16,Commute
+10/28/2025,Emily,29290,29307,17,Commute 
+10/28/2025,Emily,29346,29365,19,Brenda 
+10/28/2025,Emily,29243,29264,21,break
+10/28/2025,Emily,29220,29243,23,Travel
+10/28/2025,Emily,29307,29330,23,Helen
+10/28/2025,Emily,29264,29290,26,Commute
+10/27/2025,Emily,29180,29180,0,Commute 
+10/27/2025,Emily,29169,29170,1,Daryl 
+10/27/2025,Emily,29165,29169,4,Travel to Elsa's 
+10/27/2025,Emily,29170,29180,10,Elsa's help with marketing treats
+10/27/2025,Emily,29180,29190,10,errand
+10/27/2025,Emily,29206,29220,14,Travel to CP
+10/27/2025,Emily,29190,29206,16,Helen
+10/24/2025,Emily,29114,29135,21,Lisa F.- SSA
+10/24/2025,Emily,29086,29114,28,Commute
+10/24/2025,Emily,29135,29165,30,Commute 
+10/23/2025,Emily,29075,29086,11,Commute + gas
+10/23/2025,Emily,29020,29045,25,Nina Washington*1st ride CG riding along - gave $25 cash tip to split with Yuri
+10/23/2025,Emily,29045,29075,30,Commute
+10/22/2025,Emily,28942,28949,7,Commute 
+10/22/2025,Emily,28934,28942,8,Brenda C. 
+10/22/2025,Emily,29009,29020,11,Travel
+10/22/2025,Emily,28914,28934,20,Stephen H. - SSA
+10/22/2025,Emily,28949,29009,60,Commute
+10/21/2025,Emily,28870,28874,4,Emily Kia - commute
+10/21/2025,Emily,28813,28819,6,Mike McCormick - SSA
+10/21/2025,Emily,28831,28838,7,break
+10/21/2025,Emily,28819,28831,12,Travel + gas
+10/21/2025,Emily,28838,28870,32,Betty
+10/21/2025,Emily,28874,28914,40,Commute
+10/15/2025,Maria,121438,121445,7,Commute
+10/15/2025,Maria,121391,121399,8,Helen
+10/15/2025,Maria,121423,121438,15,break
+10/15/2025,Maria,121445,121462,17,Travel 
+10/15/2025,Maria,121368,121391,23,Carol L. 
+10/15/2025,Maria,121399,121423,24,Covert Chrysler Dodge - drop off Maria van for backup camera repair (Tam ride home)
+10/14/2025,Maria,121328,121337,9,Commute to Grown 
+10/14/2025,Maria,121337,121368,31,Jennie W
+10/14/2025,Maria,121296,121328,32,Commute
+10/13/2025,Maria,121203,121206,3,Commute
+10/13/2025,Maria,121206,121216,10,Doug B.
+10/13/2025,Maria,121239,121249,10,Travel 
+10/13/2025,Maria,121190,121203,13,*1st ride Brian King - meet Elsa to help at Legacy - facility transfer
+10/13/2025,Maria,121171,121190,19,Travel + gas + wait to pick up Jim 
+10/13/2025,Maria,121150,121171,21,Jim M. (CAPS)
+10/13/2025,Maria,121249,121270,21,Travel
+10/13/2025,Maria,121125,121150,25,Doug 
+10/13/2025,Maria,121270,121296,26,Commute
+10/10/2025,Maria,121057,121059,2,Commute
+10/10/2025,Maria,121109,121111,2,Helen
+10/10/2025,Maria,121059,121065,6,Travel
+10/10/2025,Maria,121111,121125,14,Carol L. 
+10/10/2025,Maria,121065,121084,19,Travel 
+10/10/2025,Maria,120979,121001,22,Leo / Rosa (CAPS)
+10/10/2025,Maria,121001,121026,25,Travel
+10/10/2025,Maria,121084,121109,25,Carol L. 
+10/10/2025,Maria,121026,121057,31,Commute
+10/9/2025,Maria,120944,120950,6,Commute + gas
+10/9/2025,Maria,120950,120963,13,Juan Perez *1st ride - one way Heart hospital to home for outpatient port procedure
+10/9/2025,Maria,120963,120979,16,Commute 
+10/8/2025,Adrienne,44846,44846,0,Commute with Adrienne KIA & switch back to Maria with Yuri
+10/8/2025,Adrienne,44841,44846,5,break
+10/8/2025,Adrienne,44846,44852,6,Daryl
+10/8/2025,Adrienne,44852,44860,8,Lisa F. in Adrienne Kia
+10/8/2025,Adrienne,44888,44898,10,Switch to Maria van - travel
+10/8/2025,Adrienne,120849,120876,27,Travel 
+10/8/2025,Adrienne,44860,44888,28,Virginia Marshall
+10/8/2025,Maria,120876,120880,4,Daryl 
+10/8/2025,Maria,120886,120892,6,Travel
+10/8/2025,Maria,120892,120913,21,Josels
+10/8/2025,Maria,120913,120944,31,Commute
+10/6/2025,Maria,120582,120583,1,Commute
+10/6/2025,Maria,120583,120584,1,Daryl 
+10/6/2025,Maria,120605,120606,1,Travel 
+10/6/2025,Maria,120577,120582,5,Chris Lay 
+10/6/2025,Maria,120614,120620,6,Travel
+10/6/2025,Maria,120584,120591,7,Daryl
+10/6/2025,Maria,120606,120614,8,Travel
+10/6/2025,Maria,120677,120689,12,Chris Lay. home
+10/6/2025,Maria,120591,120605,14,Lisa home
+10/6/2025,Maria,120689,120703,14,Travel 
+10/6/2025,Maria,120620,120647,27,Andrew
+10/6/2025,Maria,120647,120677,30,Commute 
+10/3/2025,Maria,120572,120577,5,Commute
+10/3/2025,Maria,120545,120552,7,*1st ride Josefina Davis
+10/3/2025,Maria,120552,120572,20,Commute 
+10/1/2025,Maria,120313,120313,0,Commute + gas
+10/1/2025,Maria,120302,120313,11,John Riley
+10/1/2025,Maria,120290,120302,12,Travel
+10/1/2025,Maria,120313,120329,16,Tito
+10/1/2025,Maria,120329,120345,16,Travel
+10/1/2025,Maria,120272,120290,18,Daryl 
+10/1/2025,Maria,120345,120366,21,Travel 
+10/1/2025,Maria,120250,120272,22,Doug B
+10/1/2025,Maria,120224,120250,26,Commute
+9/30/2025,Maria,120180,120188,8,Commute/pick up Yuri
+9/30/2025,Maria,120145,120154,9,Travel 
+9/30/2025,Maria,120212,120224,12,DeLana - mall outing with Yuri 
+9/30/2025,Maria,120188,120212,24,Bring Yuri home
+9/30/2025,Maria,120154,120180,26,Commute
+9/29/2025,Maria,120078,120078,0,Commute
+9/29/2025,Maria,120041,120042,1,Daryl
+9/29/2025,Maria,120042,120044,2,Travel
+9/29/2025,Maria,120036,120041,5,Commute 
+9/29/2025,Maria,120044,120049,5,Chris Lay
+9/29/2025,Maria,120102,120107,5,Pick up Yuri from Scott's 
+9/29/2025,Maria,120078,120085,7,Meeting with Elsa/Amy/Yuri 
+9/29/2025,Maria,120049,120063,14,Travel 
+9/29/2025,Maria,120063,120078,15,Chris Lay
+9/29/2025,Maria,120085,120102,17,Yuri home
+9/29/2025,Maria,120128,120145,17,Travel 
+9/29/2025,Maria,120107,120128,21,Carolyn Sullivan - denture fit check
+9/26/2025,Maria,120036,120036,0,Commute
+9/26/2025,Maria,120022,120024,2,Dan/Manda *1st ride 
+9/26/2025,Maria,120011,120022,11,Commute 
+9/26/2025,Maria,120024,120036,12,Quick meeting with Elsa @ Mueller
+9/25/2025,Maria,119980,119980,0,Commute/meet with Yuri
+9/25/2025,Maria,119953,119980,27,Jennie/train Yuri - split tip with Yuri
+9/25/2025,Maria,119980,120011,31,train Yuri
+9/25/2025,Maria,119921,119953,32,Commute + gas
+9/24/2025,Maria,119907,119907,0,Commute
+9/24/2025,Maria,119872,119873,1,Daryl/train Yuri
+9/24/2025,Maria,119902,119904,2,Travel
+9/24/2025,Maria,119882,119885,3,Carol/train Yuri 
+9/24/2025,Maria,119904,119907,3,Travel 
+9/24/2025,Maria,119868,119872,4,Jack & Juanita/train Yuri
+9/24/2025,Maria,119895,119902,7,Travel + train Yuri
+9/24/2025,Maria,119873,119882,9,Carol L. /train Yuri- split tip  
+9/24/2025,Maria,119885,119895,10,Train Yuri
+9/24/2025,Maria,119907,119921,14,Commute 
+9/22/2025,Maria,119852,119858,6,Commute+ gas
+9/22/2025,Maria,119830,119838,8,Doug B. - early drop
+9/22/2025,Maria,119820,119830,10,Travel 
+9/22/2025,Maria,119858,119868,10,Gary - echocardiogram 
+9/22/2025,Maria,119809,119820,11,break
+9/22/2025,Maria,119838,119852,14,Travel 
+9/22/2025,Maria,119787,119809,22,Kim B. /CG *1st ride - ARC to Dell Seton ER
+9/22/2025,Maria,119763,119787,24,Commute
+9/18/2025,Maria,119664,119667,3,Commute 
+9/18/2025,Maria,119646,119653,7,Tina Pacheco
+9/18/2025,Maria,119653,119664,11,Travel 
+9/18/2025,Maria,119624,119646,22,Stephen K.
+9/18/2025,Maria,119706,119732,26,Travel to Gtown 
+9/18/2025,Maria,119732,119763,31,Jennie W.
+9/18/2025,Maria,119667,119706,39,Commute 
+9/17/2025,Maria,119578,119592,14,Commute
+9/17/2025,Maria,119559,119576,17,Doug B. dropoff
+9/17/2025,Maria,119534,119559,25,Doug Return
+9/17/2025,Maria,119592,119624,32,Commute 
+9/16/2025,Maria,119479,119479,0,Maria van - Commute 
+9/16/2025,Maria,119479,119479,0,CX - BR pickup for Elizabeth McLellan (took Uber instead) - put $25 tip per Elsa
+9/16/2025,Maria,119509,119514,5,Daryl 
+9/16/2025,Maria,119479,119485,6,Maria van inspection on schedule - No need to get inspection until 4/2026 - home for break
+9/16/2025,Maria,119485,119492,7,Travel
+9/16/2025,Maria,119492,119509,17,John Riley haircut 
+9/16/2025,Maria,119514,119534,20,Commute + train with Yuri
+9/12/2025,Emily,25983,26001,18,Emily Kia - Brian's dental appt wasn't scheduled with dentist - no charge
+9/11/2025,Emily,25881,25900,19,Emily Kia - Commute to Gtown
+9/11/2025,Emily,25900,25922,22,Tyson Whitehead
+9/11/2025,Emily,25953,25983,30,Travel + gas
+9/11/2025,Emily,25922,25953,31,Dick
+9/11/2025,Emily,25843,25881,38,Commute 
+9/8/2025,Maria,119000,119005,5,Commute
+9/8/2025,Maria,119050,119055,5,Chris Lay
+9/8/2025,Maria,119005,119012,7,Travel
+9/8/2025,Maria,119012,119019,7,James Sprinkle - facility transfer
+9/8/2025,Maria,119055,119064,9,Drop off transport WC at Amy's 
+9/8/2025,Maria,119019,119030,11,Travel
+9/8/2025,Maria,119030,119050,20,Carol Lewis - go get carwash & clean van while waiting for Carol
+9/8/2025,Maria,119064,119089,25,Christian Bros RR - drop off Maria for engine check repair & take courtesy shuttle home
+9/5/2025,Maria,118908,118909,1,Commute
+9/5/2025,Maria,118988,118991,3,Daryl
+9/5/2025,Maria,118904,118908,4,Travel + wait 20min to pick up Doug
+9/5/2025,Maria,118991,119000,9,Doug B. dropoff
+9/5/2025,Maria,118937,118950,13,Doug B. return pickup
+9/5/2025,Maria,118952,118965,13,Travel + wait 5min to pick up Brent
+9/5/2025,Maria,118965,118988,23,Brent
+9/5/2025,Maria,118909,118937,28,Commute 
+9/3/2025,Adrienne,42606,42613,7,Adrienne Kia - commute to Gtown
+9/3/2025,Adrienne,42574,42606,32,"break, pick up Maria van"
+9/3/2025,Adrienne,42539,42574,35,Maria van - Carol B./Laurie
+9/3/2025,Maria,118767,118779,12,Melissa Tate
+9/3/2025,Maria,118720,118767,47,Commute 
+9/2/2025,Maria,118566,118566,0,Daryl
+9/2/2025,Maria,118624,118625,1,Daryl 
+9/2/2025,Maria,118561,118566,5,Commute 
+9/2/2025,Maria,118614,118624,10,Travel 
+9/2/2025,Maria,118593,118614,21,Doug B.
+9/2/2025,Maria,118661,118687,26,Jennie W.
+9/2/2025,Maria,118566,118593,27,Travel 
+9/2/2025,Maria,118687,118720,33,Commute + gas
+9/2/2025,Maria,118625,118661,36,Travel to Gtown
+8/29/2025,Maria,118543,118561,18,Commute 
+8/29/2025,Maria,118494,118513,19,Commute
+8/29/2025,Maria,118513,118543,30,Tina/Julissa
+8/27/2025,Maria,118482,118494,12,Commute
+8/27/2025,Maria,118424,118437,13,Doug B.
+8/27/2025,Maria,118465,118482,17,Carol B.
+8/27/2025,Maria,118404,118424,20,Travel 
+8/27/2025,Maria,118334,118362,28,Commute
+8/27/2025,Maria,118437,118465,28,Travel 
+8/27/2025,Maria,118362,118404,42,Lisa Fern
+8/26/2025,Adrienne,42370,42389,19,break 
+8/26/2025,Adrienne,42329,42349,20,Commute 
+8/26/2025,Adrienne,42349,42370,21,Brenda C.
+8/26/2025,Adrienne,42389,42424,35,Travel to Gtown
+8/26/2025,Adrienne,42505,42540,35,Commute 
+8/26/2025,Adrienne,42424,42505,81,Melissa Tate
+8/25/2025,Adrienne,42321,42329,8,Commute
+8/25/2025,Adrienne,42289,42298,9,Travel
+8/25/2025,Adrienne,42241,42260,19,Lisa Fern
+8/25/2025,Adrienne,42298,42321,23,Gary
+8/25/2025,Adrienne,42260,42289,29,Travel home for break
+8/25/2025,Adrienne,42208,42241,33,Commute 
+8/22/2025,Adrienne,42122,42150,28,Commute 
+8/22/2025,Adrienne,42150,42179,29,Lisa Fern 
+8/22/2025,Adrienne,42179,42208,29,Commute 
+8/20/2025,Adrienne,41908,41920,12,Travel
+8/20/2025,Adrienne,41845,41864,19,Commute 
+8/20/2025,Adrienne,41920,41940,20,Virginia Marshall to daughter's house (OW) + wait 25min to pick up Virginia 
+8/20/2025,Adrienne,42003,42032,29,Commute 
+8/20/2025,Adrienne,41973,42003,30,Lisa Fern
+8/20/2025,Adrienne,41940,41973,33,Travel
+8/20/2025,Adrienne,41864,41908,44,Brenda C
+8/19/2025,Maria,118084,118096,12,Commute 
+8/19/2025,Maria,118118,118130,12,Commute 
+8/19/2025,Maria,118096,118118,22,Carol B/Laurie daughter *1st ride
+8/18/2025,Maria,118032,118039,7,Carol L. - temp crown fix
+8/18/2025,Maria,118039,118047,8,Travel
+8/18/2025,Maria,118020,118032,12,Commute 
+8/18/2025,Maria,118047,118061,14,Barbara B. - CAPS
+8/18/2025,Maria,118061,118084,23,Commute 
+8/15/2025,Maria,117939,117944,5,Alan White - 1 way from hotel to home
+8/15/2025,Maria,117930,117939,9,Commute 
+8/15/2025,Maria,118008,118020,12,Commute 
+8/15/2025,Maria,117944,117958,14,Travel + wait 25min to pick up Joan
+8/15/2025,Maria,117958,118008,50,Joan Chase
+8/13/2025,Maria,117856,117868,12,Travel
+8/13/2025,Maria,117823,117839,16,Commute 
+8/13/2025,Maria,117839,117856,17,Christi + Alexis
+8/13/2025,Maria,117911,117930,19,Commute 
+8/13/2025,Maria,117868,117911,43,Ginnie
+8/12/2025,Maria,117811,117823,12,Commute + gas 
+8/12/2025,Maria,117777,117790,13,Commute 
+8/12/2025,Maria,117790,117811,21,Yvonne 
+8/11/2025,Maria,117694,117695,1,Daryl 
+8/11/2025,Maria,117753,117754,1,Daryl 
+8/11/2025,Maria,117754,117757,3,Travel 
+8/11/2025,Maria,117690,117694,4,Commute 
+8/11/2025,Maria,117757,117763,6,John/Ethel
+8/11/2025,Maria,117743,117753,10,Travel 
+8/11/2025,Maria,117763,117777,14,Commute + van wash @ Mister Carwash Burnet Rd.
+8/11/2025,Maria,117722,117743,21,Doug B.
+8/11/2025,Maria,117695,117722,27,Travel
+8/8/2025,Maria,117685,117690,5,Commute 
+8/8/2025,Maria,117669,117676,7,Commute 
+8/8/2025,Maria,117676,117685,9,Rodney 
+8/6/2025,Maria,117510,117515,5,Travel
+8/6/2025,Maria,117515,117524,9,Kathy H.
+8/6/2025,Maria,117496,117510,14,Josels
+8/6/2025,Maria,117524,117538,14,Commute 
+8/6/2025,Maria,117472,117496,24,Commute 
+8/5/2025,Maria,117388,117406,18,Commute 
+8/5/2025,Maria,117452,117472,20,Commute 
+8/5/2025,Maria,117406,117452,46,John Riley 
+8/4/2025,Maria,117373,117380,7,Gary
+8/4/2025,Maria,117380,117388,8,Commute 
+8/4/2025,Maria,117363,117373,10,Commute 
+8/1/2025,Maria,117189,117194,5,Commute 
+8/1/2025,Maria,117194,117214,20,Gayle to home in Elgin
+8/1/2025,Maria,117214,117235,21,Commute 
+7/31/2025,Adrienne,41004,41014,10,Meet with Elsa @ Hoi Cao Nien (Austin Viet Senior Association)
+7/30/2025,Maria,117035,117035,0,Travel
+7/30/2025,Maria,117033,117035,2,Meet with Elsa @ Luna's Tacos RR
+7/30/2025,Maria,117020,117033,13,Doug B.
+7/30/2025,Maria,117035,117050,15,Doug B.  
+7/30/2025,Maria,117050,117074,24,Commute 
+7/30/2025,Maria,116995,117020,25,Commute 
+7/29/2025,Maria,116910,116925,15,Barbara Marco *1st ride
+7/29/2025,Maria,116975,116995,20,Commute
+7/29/2025,Maria,116951,116975,24,John Riley
+7/29/2025,Maria,116925,116951,26,Travel + wait 30min to pick up John
+7/29/2025,Maria,116883,116910,27,Commute 
+7/28/2025,Maria,116826,116827,1,Daryl 
+7/28/2025,Maria,116827,116830,3,break
+7/28/2025,Maria,116821,116826,5,Commute 
+7/28/2025,Maria,116872,116883,11,Commute 
+7/28/2025,Maria,116830,116842,12,Travel
+7/28/2025,Maria,116842,116872,30,Leona
+7/25/2025,Maria,116768,116775,7,gas + travel to next ride
+7/25/2025,Maria,116813,116821,8,Commute 
+7/25/2025,Maria,116755,116768,13,John Riley - haircut (paid for haircut with Elderwheels credit card - CG forgot to bring John's card to pay)
+7/25/2025,Maria,116738,116755,17,Commute 
+7/25/2025,Maria,116775,116813,38,Chadee
+7/24/2025,Maria,116613,116616,3,break
+7/24/2025,Maria,116601,116605,4,Commute 
+7/24/2025,Maria,116605,116613,8,Elfie
+7/24/2025,Maria,116616,116648,32,Travel
+7/24/2025,Maria,116706,116738,32,Commute 
+7/24/2025,Maria,116648,116706,58,Dick Baldwin *1st ride
+7/23/2025,Maria,116525,116537,12,Travel
+7/23/2025,Maria,116502,116525,23,Tito
+7/23/2025,Maria,116478,116502,24,Commute 
+7/23/2025,Maria,116572,116601,29,Commute 
+7/23/2025,Maria,116537,116572,35,Billie
+7/22/2025,Maria,116467,116471,4,Ronald
+7/22/2025,Maria,116471,116478,7,Commute 
+7/22/2025,Maria,116381,116398,17,Commute 
+7/22/2025,Maria,116444,116467,23,Travel + wait 20min to pick up Ronald 
+7/22/2025,Maria,116398,116444,46,John Riley 
+7/21/2025,Maria,116304,116305,1,Daryl
+7/21/2025,Maria,116305,116309,4,break
+7/21/2025,Maria,116309,116318,9,Travel
+7/21/2025,Maria,116294,116304,10,Travel
+7/21/2025,Maria,116368,116381,13,Commute 
+7/21/2025,Maria,116273,116294,21,Doug B.
+7/21/2025,Maria,116248,116273,25,Commute + gas
+7/21/2025,Maria,116318,116368,50,Joan Chase
+7/7/2025,Maria,115464,115484,20,break 
+7/7/2025,Maria,115533,115554,21,Commute + clean van
+7/7/2025,Maria,115418,115440,22,Commute 
+7/7/2025,Maria,115440,115464,24,John R.
+7/7/2025,Maria,115484,115508,24,Travel 
+7/7/2025,Maria,115508,115533,25,Jack/Juanita - no CG - tip charged on 7/8 visit per Amy
+7/3/2025,Maria,115386,115392,6,Commute + gas
+7/3/2025,Maria,115392,115401,9,Zachary B. 
+7/3/2025,Maria,115401,115418,17,Commute 
+7/2/2025,Maria,115293,115331,38,Commute 
+7/2/2025,Maria,115203,115244,41,Commute to Jarrell + air up tires
+7/2/2025,Maria,115244,115293,49,Bobby/Kathy
+7/1/2025,Adrienne,39666,39683,17,Commute 
+7/1/2025,Adrienne,39596,39615,19,Commute 
+7/1/2025,Adrienne,39615,39666,51,Brenda C.
+6/30/2025,Maria,115159,115167,8,break
+6/30/2025,Maria,115194,115202,8,Commute 
+6/30/2025,Maria,115101,115110,9,Robert W.
+6/30/2025,Maria,115167,115177,10,Travel 
+6/30/2025,Maria,115090,115101,11,Commute + gas
+6/30/2025,Maria,115177,115194,17,Vern
+6/30/2025,Maria,115134,115155,21,Doug B.
+6/30/2025,Maria,115110,115134,24,Travel
+6/25/2025,Maria,114935,114936,1,errand 
+6/25/2025,Maria,114932,114935,3,George/CG
+6/25/2025,Maria,114936,114939,3,George/CG return
+6/25/2025,Maria,114939,114945,6,Commute 
+6/25/2025,Maria,114907,114917,10,Patels
+6/25/2025,Maria,114893,114907,14,Commute 
+6/25/2025,Maria,114917,114932,15,Travel + wait 15min to pick up Kitzmillers
+6/23/2025,Maria,114884,114884,0,break
+6/23/2025,Maria,114889,114889,0,Daryl
+6/23/2025,Maria,114876,114880,4,Commute 
+6/23/2025,Maria,114880,114884,4,Daryl
+6/23/2025,Maria,114889,114893,4,Commute 
+6/23/2025,Maria,114884,114889,5,Travel
+6/20/2025,Maria,114830,114835,5,Commute 
+6/20/2025,Maria,114855,114861,6,Elderwheels team lunch meeting @ Lamar Activity Center
+6/20/2025,Maria,114870,114876,6,Commute 
+6/20/2025,Maria,114848,114855,7,break
+6/20/2025,Maria,114861,114870,9,Rodney 
+6/20/2025,Maria,114835,114848,13,Rodney *1st ride / tandem with Stephen Ku to CAPS @ Lamar
+6/18/2025,Maria,114588,114596,8,De Lana
+6/18/2025,Maria,114506,114523,17,Commute + gas
+6/18/2025,Maria,114570,114588,18,Travel 
+6/18/2025,Maria,114596,114615,19,Commute 
+6/18/2025,Maria,114523,114570,47,John Riley
+6/16/2025,Maria,114378,114379,1,Daryl
+6/16/2025,Maria,114379,114380,1,Oil change for Maria van @ Oil Works on Airport Blvd.
+6/16/2025,Maria,114373,114378,5,Commute 
+6/16/2025,Maria,114419,114433,14,Commute 
+6/16/2025,Maria,114380,114397,17,Travel
+6/16/2025,Maria,114397,114419,22,Preston
+6/11/2025,Adrienne,39138,39138,0,Daryl - CX due to not feeling up to it/off today
+6/11/2025,Adrienne,39134,39138,4,Commute 
+6/11/2025,Adrienne,39138,39153,15,Travel + wait 15min to pick up Brenda
+6/11/2025,Adrienne,39176,39192,16,Commute 
+6/11/2025,Adrienne,39153,39176,23,Brenda C.
+6/9/2025,Maria,113946,113947,1,Daryl
+6/9/2025,Maria,113947,113950,3,break
+6/9/2025,Maria,113936,113946,10,Travel + wait 8min to pick up Daryl
+6/9/2025,Maria,113950,113960,10,Travel
+6/9/2025,Maria,113915,113936,21,Doug B.
+6/9/2025,Maria,113960,113981,21,Doug B.
+6/9/2025,Maria,113887,113915,28,Commute 
+6/9/2025,Maria,113981,114010,29,Commute + gas
+6/4/2025,Adrienne,38858,38876,18,Switch cars with Elsa/Commute 
+6/4/2025,Maria,113513,113531,18,Renee
+6/4/2025,Maria,113491,113513,22,Commute 
+6/4/2025,Maria,113598,113662,64,Herb/Elaine
+6/4/2025,Maria,113531,113598,67,Travel to Lampasas
+6/2/2025,Maria,113450,113451,1,Daryl
+6/2/2025,Maria,113469,113472,3,Carol L. - dropoff
+6/2/2025,Maria,113472,113475,3,errands
+6/2/2025,Maria,113475,113478,3,Carol L. - return
+6/2/2025,Maria,113437,113441,4,Commute 
+6/2/2025,Maria,113446,113450,4,Travel + wait 5min to pick up Daryl
+6/2/2025,Maria,113441,113446,5,Daryl + gas
+6/2/2025,Maria,113478,113491,13,Commute 
+6/2/2025,Maria,113455,113469,14,Travel + wait 10min to pick up Carol 
+5/21/2025,Jim,112636,112640,4,Travel + wait to pick up Leona 
+5/21/2025,Jim,112657,112668,11,Commute 
+5/21/2025,Jim,112622,112636,14,Shirley G.
+5/21/2025,Jim,112640,112657,17,Leona - return trip home from hospital
+5/21/2025,Jim,112604,112622,18,Commute + wait 5 min to pick up Shirley
+5/20/2025,Jim,112510,112528,18,Commute + gas + wait 5min to pick up John
+5/20/2025,Jim,112584,112604,20,Commute 
+5/20/2025,Jim,112528,112584,56,John Riley - haircut + shopping
+5/19/2025,Jim,112410,112411,1,Daryl
+5/19/2025,Jim,112411,112414,3,Break
+5/19/2025,Jim,112400,112410,10,Travel
+5/19/2025,Jim,112454,112464,10,Travel
+5/19/2025,Jim,112414,112425,11,Travel
+5/19/2025,Jim,112379,112400,21,Doug B.
+5/19/2025,Jim,112464,112485,21,Doug B.
+5/19/2025,Jim,112354,112379,25,Commute + wait 5min to pick up Doug 
+5/19/2025,Jim,112485,112510,25,Commute 
+5/19/2025,Jim,112425,112454,29,Andrew/Hope
+5/16/2025,Adrienne,37564,37583,19,Commute 
+5/16/2025,Adrienne,37606,37625,19,Travel to school and exchange cars with Elsa
+5/16/2025,Adrienne,37583,37606,23,Brenda Conners - errands
+5/16/2025,Jim,112352,112354,2,Commute 
+5/12/2025,Jim,111931,111935,4,Travel / wait 15min to pick up Leona
+5/12/2025,Jim,112036,112041,5,"Cobblestone Court residents to hotel stay (Phillip, Rebecca)"
+5/12/2025,Jim,112041,112056,15,Commute 
+5/12/2025,Jim,111935,111953,18,Leona - ER 
+5/12/2025,Jim,111953,111971,18,Travel / get gas
+5/12/2025,Jim,112017,112036,19,Travel 
+5/12/2025,Jim,111910,111931,21,Benjamin 
+5/12/2025,Jim,111971,111992,21,Benjamin 
+5/12/2025,Jim,111885,111910,25,Commute 
+5/12/2025,Jim,111992,112017,25,Commute home for break
+5/9/2025,Jim,111808,111815,7,Travel
+5/9/2025,Jim,111828,111839,11,Travel
+5/9/2025,Jim,111815,111828,13,James B. - CAPS
+5/9/2025,Jim,111839,111859,20,Benjamin
+5/9/2025,Jim,111787,111808,21,Benjamin 
+5/9/2025,Jim,111762,111787,25,Commute 
+5/9/2025,Jim,111859,111885,26,Commute 
+5/7/2025,Jim,111675,111699,24,Commute 
+5/7/2025,Jim,111736,111762,26,Commute 
+5/7/2025,Jim,111699,111736,37,Doug B.
+5/5/2025,Adrienne,36774,36774,0,Margaret L. - declutter car
+5/5/2025,Adrienne,36786,36786,0,wait for Gary
+5/5/2025,Adrienne,36768,36769,1,Daryl
+5/5/2025,Adrienne,36754,36757,3,Commute 
+5/5/2025,Adrienne,36757,36760,3,Daryl
+5/5/2025,Adrienne,36764,36768,4,Travel 
+5/5/2025,Adrienne,36769,36774,5,Travel / wait 15min for Margaret
+5/5/2025,Adrienne,36810,36818,8,Commute 
+5/5/2025,Adrienne,36774,36786,12,Travel
+5/5/2025,Adrienne,36786,36810,24,Gary
+5/2/2025,Adrienne,36739,36754,15,Commute home in Adrienne Kia (swap cars with Elsa)
+5/2/2025,Maria,111466,111468,2,Daryl - had coffee & chatted a bit
+5/2/2025,Maria,111460,111466,6,Commute 
+5/2/2025,Maria,111485,111500,15,DeLana
+5/2/2025,Maria,111468,111485,17,Travel
+4/30/2025,Maria,111434,111434,0,Linda Cox - declutter with Elsa & Amy
+4/30/2025,Maria,111450,111455,5,Margaret L.
+4/30/2025,Maria,111455,111460,5,Commute 
+4/30/2025,Maria,111434,111440,6,Austin Reuse & Recycle Drop-off Center
+4/30/2025,Maria,111440,111450,10,Travel /wait 10min to pick up Margaret 
+4/30/2025,Maria,111415,111434,19,Commute 
+4/29/2025,Maria,111405,111407,2,Brian Horst
+4/29/2025,Maria,111399,111405,6,Commute 
+4/29/2025,Maria,111407,111415,8,Commute 
+4/28/2025,Maria,111314,111331,17,Travel / get gas
+4/28/2025,Maria,111379,111399,20,Commute 
+4/28/2025,Maria,111261,111282,21,Commute 
+4/28/2025,Maria,111282,111303,21,Doug B.
+4/28/2025,Maria,111331,111379,48,John Riley - Roaring Fork lunch
+4/23/2025,Maria,111150,111151,1,Daryl
+4/23/2025,Maria,111161,111163,2,Travel
+4/23/2025,Maria,111174,111179,5,Commute 
+4/23/2025,Maria,111132,111141,9,*Stuart Manchee - 1st ride
+4/23/2025,Maria,111141,111150,9,Travel / communicate with Scott+ wait 15min to pick up Daryl
+4/23/2025,Maria,111163,111174,11,Brian Horst
+4/23/2025,Maria,111113,111132,19,Commute 
+4/22/2025,Maria,111110,111113,3,Commute 
+4/22/2025,Maria,111058,111062,4,Everett 
+4/22/2025,Maria,111062,111068,6,Everett- return
+4/22/2025,Maria,111098,111110,12,Margaret
+4/22/2025,Maria,111068,111098,30,Travel
+4/22/2025,Maria,111027,111058,31,Commute 
+4/21/2025,Maria,110970,110970,0,Commute 
+4/21/2025,Maria,110985,110994,9,Travel 
+4/21/2025,Maria,111018,111027,9,Commute 
+4/21/2025,Maria,110970,110985,15,Suzanne Frump *1st ride
+4/21/2025,Maria,110994,111018,24,Gary
+4/18/2025,Maria,110841,110845,4,Suzanne Phipps - DC from NAMC to Tech Ridge
+4/18/2025,Maria,110845,110854,9,Travel
+4/18/2025,Maria,110831,110841,10,Commute 
+4/18/2025,Maria,110955,110970,15,Commute 
+4/18/2025,Maria,110854,110955,101,John Bratt - BSW clinic in Temple
+4/16/2025,Maria,110749,110765,16,Commute 
+4/16/2025,Maria,110705,110724,19,Commute 
+4/16/2025,Maria,110724,110749,25,Ralph Conners - VA Clinic
+4/15/2025,Maria,110669,110677,8,Commute 
+4/15/2025,Maria,110697,110705,8,Commute 
+4/15/2025,Maria,110677,110697,20,Brent Ammon
+4/11/2025,Maria,110648,110650,2,De Lana
+4/11/2025,Maria,110588,110591,3,De Lana
+4/11/2025,Maria,110631,110648,17,Travel 
+4/11/2025,Maria,110613,110631,18,James Brocker
+4/11/2025,Maria,110569,110588,19,Commute 
+4/11/2025,Maria,110650,110669,19,Commute 
+4/11/2025,Maria,110591,110613,22,Travel 
+4/9/2025,Maria,110563,110569,6,Commute 
+4/9/2025,Maria,110535,110543,8,"John Wilson /pcp visit, pick up rx @ HEB after "
+4/9/2025,Maria,110543,110553,10,Travel
+4/9/2025,Maria,110553,110563,10,Anthony
+4/9/2025,Maria,110517,110535,18,Commute / gas
+4/7/2025,Jim,119528,119530,2,Daryl - Monkey's Nest coffee
+4/7/2025,Jim,119524,119528,4,Commute 
+4/7/2025,Jim,119530,119547,17,Travel / Jim photos for Elsa /wait to pick up Jack & Juanita
+4/7/2025,Jim,119571,119591,20,Commute 
+4/7/2025,Jim,119547,119571,24,Jack & Juanita (& CG)
+4/3/2025,Jim,119507,119524,17,Pick up Jim from Christian Bros Round Rock; install car fans in van in case AC goes out again
+3/31/2025,Jim,119456,119456,0,Ronald - measure height in WC for Emily transport
+3/31/2025,Jim,119429,119440,11,Dave/Jane
+3/31/2025,Jim,119456,119470,14,"Travel/drive Jim around to check AC (wasn't cooling, blowing out ambient air while driving)"
+3/31/2025,Jim,119440,119456,16,Travel
+3/31/2025,Jim,119412,119429,17,Commute/gas/clean van
+3/31/2025,Jim,119470,119497,27,Christian Bros Round Rock to drop off Jim for AC cooling issue/ wait for courtesy driver to take home
+3/26/2025,Jim,119286,119299,13,Commute 
+3/26/2025,Jim,119335,119349,14,Commute 
+3/26/2025,Jim,119299,119335,36,Karen Jackson *1st ride
+3/25/2025,Jim,119245,119251,6,Commute 
+3/25/2025,Jim,119251,119257,6,Preston
+3/25/2025,Jim,119280,119286,6,Commute 
+3/25/2025,Jim,119265,119272,7,Travel
+3/25/2025,Jim,119257,119265,8,errand
+3/25/2025,Jim,119272,119280,8,Preston
+3/24/2025,Jim,119197,119208,11,Commute 
+3/24/2025,Jim,119231,119245,14,Commute 
+3/24/2025,Jim,119208,119231,23,Anthony/Hope
+3/14/2025,Emily,17637,17641,4,Stephen / talk to Amy about work 
+3/14/2025,Emily,17632,17637,5,Commute 
+3/14/2025,Jim,118689,118693,4,Stephen-tandem #1
+3/14/2025,Jim,118693,118700,7,Arthur-tandem #2
+3/14/2025,Jim,118656,118664,8,John Riley - walkin haircut
+3/14/2025,Jim,118700,118708,8,James-tandem #3
+3/14/2025,Jim,118708,118729,21,Commute 
+3/14/2025,Jim,118633,118656,23,Travel / wait to pick up John (5min)
+3/14/2025,Jim,118664,118689,25,Travel /clean van while waiting to pick up CAPs clients 
+3/12/2025,Jim,118465,118465,0,wait to pick up Everett (20min)
+3/12/2025,Jim,118416,118419,3,Betty K. *1st ride (extra person charge)
+3/12/2025,Jim,118436,118439,3,Betty
+3/12/2025,Jim,118419,118427,8,break
+3/12/2025,Jim,118427,118436,9,Travel/wait for Betty (15min)
+3/12/2025,Jim,118465,118478,13,Everett
+3/12/2025,Jim,118382,118397,15,Robert W. *1st ride
+3/12/2025,Jim,118397,118416,19,Travel / messages /get gas / change anti skid mats in back of van / wait 15 min to pick up Betty
+3/12/2025,Jim,118439,118465,26,Travel
+3/12/2025,Jim,118353,118382,29,Commute 
+3/12/2025,Jim,118478,118509,31,Commute 
+3/10/2025,Jim,118293,118294,1,Daryl 
+3/10/2025,Jim,118322,118323,1,Daryl
+3/10/2025,Jim,118323,118324,1,Travel
+3/10/2025,Jim,118320,118322,2,Travel 
+3/10/2025,Jim,118288,118293,5,Commute 
+3/10/2025,Jim,118294,118306,12,Travel/wait 15min to pick up Eddie
+3/10/2025,Jim,118306,118320,14,Eddie E.
+3/10/2025,Jim,118324,118338,14,Eddie E.
+3/10/2025,Jim,118338,118353,15,Commute 
+3/7/2025,Adrienne,33972,33997,25,Commute 
+3/7/2025,Adrienne,34050,34081,31,Travel to Elsa's to switch back to Jim van
+3/7/2025,Adrienne,33997,34050,53,Judie Bellinger *1st ride - Lakeway 
+3/7/2025,Jim,118278,118288,10,Commute home with Jim van
+3/6/2025,Adrienne,33963,33972,9,"Meet with Elsa to get Adrienne key & garage clicker, work stuff"
+3/6/2025,Jim,118264,118278,14,"Elsa's to pickup Adrienne Kia, leave Jim van "
+3/6/2025,Jim,118216,118239,23,Commute 
+3/6/2025,Jim,118239,118264,25,Patsy - haircut 
+3/4/2025,Jim,118018,118018,0,Travel 
+3/4/2025,Jim,117974,117980,6,Commute 
+3/4/2025,Jim,118018,118031,13,Margaret - Elsa's old neighbor / swap out with Elsa
+3/4/2025,Jim,118031,118045,14,errands
+3/4/2025,Jim,117980,117995,15,Cindy 
+3/4/2025,Jim,118068,118083,15,Cindy
+3/4/2025,Jim,117995,118015,20,Commute 
+3/4/2025,Jim,118045,118068,23,Travel / wait for Cindy
+3/3/2025,Jim,117942,117943,1,Daryl
+3/3/2025,Jim,117969,117970,1,Daryl
+3/3/2025,Jim,117966,117969,3,Travel/wait to pick up Daryl
+3/3/2025,Jim,117970,117974,4,Commute 
+3/3/2025,Jim,117937,117942,5,Commute 
+3/3/2025,Jim,117943,117966,23,"Travel/get gas/meet Elsa to switch vehicles, meeting phone call with Elsa & Amy "
+2/26/2025,Jim,117857,117857,0,Wait to pick up Jack/Juanita
+2/26/2025,Jim,117888,117900,12,Travel
+2/26/2025,Jim,117857,117871,14,Jack/Juanita
+2/26/2025,Jim,117820,117835,15,DeLana
+2/26/2025,Jim,117900,117916,16,DeLana
+2/26/2025,Jim,117871,117888,17,errand
+2/26/2025,Jim,117801,117820,19,Commute 
+2/26/2025,Jim,117916,117937,21,Commute 
+2/26/2025,Jim,117835,117857,22,Travel
+2/25/2025,Jim,117733,117751,18,Commute 
+2/25/2025,Jim,117782,117801,19,Commute 
+2/25/2025,Jim,117751,117782,31,John Wilson 
+2/24/2025,Jim,117730,117733,3,Commute 
+2/24/2025,Jim,117725,117730,5,Daryl - P. Terry's & dentist cleaning 
+2/24/2025,Jim,117715,117725,10,Travel / wait to pick up Daryl 
+2/24/2025,Jim,117694,117715,21,Doug
+2/24/2025,Jim,117669,117694,25,Commute 
+2/19/2025,Jim,117661,117669,8,Commute 
+2/19/2025,Jim,117639,117650,11,Commute / gas
+2/19/2025,Jim,117650,117661,11,Gary
+2/14/2025,Jim,117578,117582,4,Stephen 
+2/14/2025,Jim,117573,117578,5,Commute 
+2/14/2025,Jim,117596,117601,5,Preston 
+2/14/2025,Jim,117590,117596,6,Travel
+2/14/2025,Jim,117601,117611,10,Commute 
+2/13/2025,Jim,117536,117536,0,Wait for Ginnie
+2/13/2025,Jim,117484,117488,4,Travel
+2/13/2025,Jim,117457,117464,7,Commute 
+2/13/2025,Jim,117464,117474,10,Anthony 
+2/13/2025,Jim,117474,117484,10,errands
+2/13/2025,Jim,117488,117500,12,Anthony
+2/13/2025,Jim,117536,117552,16,Ginnie
+2/13/2025,Jim,117552,117573,21,Commute 
+2/13/2025,Jim,117508,117536,28,Travel 
+2/12/2025,Jim,117440,117440,0,"Take photos of Jim van (black lining of sliding door, ramp tape peeling off), email to Matthew for maintenance ; wait to pick up Pam"
+2/12/2025,Jim,117440,117444,4,Pam
+2/12/2025,Jim,117435,117440,5,Pam
+2/12/2025,Jim,117422,117435,13,Commute 
+2/12/2025,Jim,117444,117457,13,Commute 
+2/11/2025,Jim,117393,117403,10,Braden Johns - TX neurorehab pt
+2/11/2025,Jim,117375,117393,18,Commute 
+2/11/2025,Jim,117403,117422,19,Commute /gas
+2/5/2025,Jim,117230,117230,0,Clean Jim van
+2/5/2025,Jim,117296,117296,0,Daryl 
+2/5/2025,Jim,117274,117275,1,Daryl 
+2/5/2025,Jim,117275,117278,3,Travel / wait to pick up Kitzmillers
+2/5/2025,Jim,117270,117274,4,Commute 
+2/5/2025,Jim,117305,117312,7,George/Kay
+2/5/2025,Jim,117278,117286,8,George/Kay K.
+2/5/2025,Jim,117312,117320,8,Commute /put in Square notes for George/Kay
+2/5/2025,Jim,117296,117305,9,Travel
+2/5/2025,Jim,117286,117296,10,Travel
+2/4/2025,Jim,117258,117258,0,CX fee for Clemmons - keep late fee per Elsa
+2/4/2025,Jim,117212,117218,6,Commute 
+2/4/2025,Jim,117252,117258,6,Karin/Sonia
+2/4/2025,Jim,117258,117270,12,Commute 
+2/4/2025,Jim,117218,117233,15,Cindy M. 
+2/4/2025,Jim,117233,117252,19,Travel / install fans in Jim / wait to pick up Sonia - *purchased 1 car fan from Amazon using personal credit card ($27.04); another fan purchased with Elsa Elderwheels credit card
+2/3/2025,Jim,117188,117198,10,Carol L.
+2/3/2025,Jim,117198,117212,14,Commute 
+2/3/2025,Jim,117173,117188,15,Commute 
+1/31/2025,Jim,117157,117159,2,Travel / Message about Barbara going to ER South Austin
+1/31/2025,Jim,117159,117162,3,Wait for Tina @ ARC in case she finish early
+1/31/2025,Jim,117139,117143,4,Barbara H. *1st ride
+1/31/2025,Jim,117143,117149,6,Travel / wait to pick up Tina for appt (early pickup)
+1/31/2025,Jim,117149,117157,8,Tina/Julissa
+1/31/2025,Jim,117162,117173,11,Commute 
+1/31/2025,Jim,117126,117139,13,Commute
+1/28/2025,Jim,117073,117087,14,Commute 
+1/28/2025,Jim,117109,117126,17,Commute 
+1/28/2025,Jim,117087,117109,22,Dawn Shaefer
+1/27/2025,Jim,117016,117022,6,Renee
+1/27/2025,Jim,117035,117047,12,Martha - transfer from facility to home
+1/27/2025,Jim,117022,117035,13,Travel/messaging about Martha
+1/27/2025,Jim,116998,117016,18,Commute 
+1/27/2025,Jim,117047,117073,26,Commute 
+1/22/2025,Jim,116926,116935,9,Martha Mims - home to facility transfer
+1/22/2025,Jim,116987,116998,11,Commute 
+1/22/2025,Jim,116935,116955,20,Travel + wait to pick up Stephen 
+1/22/2025,Jim,116905,116926,21,Commute 
+1/22/2025,Jim,116955,116987,32,Stephen H.
+1/20/2025,Jim,116872,116886,14,Ernestina
+1/20/2025,Jim,116886,116905,19,Commute 
+1/20/2025,Jim,116850,116872,22,Commute 
+1/16/2025,Jim,116834,116837,3,Stephen 
+1/16/2025,Jim,116837,116840,3,Travel
+1/16/2025,Jim,116840,116843,3,George Kitzmiller *1st ride facility transfer
+1/16/2025,Jim,116824,116829,5,home 
+1/16/2025,Jim,116829,116834,5,Travel 
+1/16/2025,Jim,116843,116850,7,Commute 
+1/16/2025,Jim,116812,116824,12,Chris Shiver
+1/16/2025,Jim,116793,116812,19,Commute / gas
+1/15/2025,Jim,116745,116745,0,Daryl
+1/15/2025,Jim,116745,116749,4,Commute 
+1/15/2025,Jim,116740,116745,5,Commute 
+1/15/2025,Jim,116785,116793,8,Commute 
+1/15/2025,Jim,116749,116761,12,Travel
+1/15/2025,Jim,116761,116785,24,Gary
+1/14/2025,Jim,116654,116673,19,Commute 
+1/14/2025,Jim,116721,116740,19,Commute 
+1/14/2025,Jim,116673,116721,48,Ginnie
+1/13/2025,Jim,116536,116537,1,Daryl
+1/13/2025,Jim,116591,116598,7,Travel
+1/13/2025,Jim,116519,116527,8,Ernestina
+1/13/2025,Jim,116546,116554,8,Ernestina 
+1/13/2025,Jim,116527,116536,9,Travel
+1/13/2025,Jim,116537,116546,9,Travel 
+1/13/2025,Jim,116580,116591,11,Pam
+1/13/2025,Jim,116499,116519,20,Commute / air up tires
+1/13/2025,Jim,116554,116580,26,Travel + wait to pickup Pam for appt
+1/13/2025,Jim,116628,116654,26,Commute 
+1/13/2025,Jim,116598,116628,30,Doug
+1/8/2025,Jim,116434,116444,10,Travel
+1/8/2025,Jim,116376,116388,12,Travel
+1/8/2025,Jim,116355,116376,21,Doug B/Gail
+1/8/2025,Jim,116444,116465,21,Doug/Gail
+1/8/2025,Jim,116412,116434,22,Commute 
+1/8/2025,Jim,116331,116355,24,Commute 
+1/8/2025,Jim,116388,116412,24,Duane/Diana
+1/8/2025,Jim,116465,116499,34,Commute / gas
+1/7/2025,Jim,116319,116325,6,Karin/Sonia
+1/7/2025,Jim,116325,116331,6,Commute 
+1/7/2025,Jim,116312,116319,7,Commute 

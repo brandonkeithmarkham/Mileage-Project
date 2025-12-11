@@ -1,0 +1,246 @@
+Date,Vehicle ,Start Mileage,End Mileage,Total Mileage,Mileage Type 
+10/13/2025,Emily,27633,27657,24,Lisa
+10/13/2025,Emily,27657,27674,17,
+10/13/2025,Emily,27674,27698,24,
+10/14/2025,Emily,27698,27725,27,Commute to Helen
+10/14/2025,Emily,27725,27729,4,Helen 
+10/14/2025,Emily,27729,27733,4,Hellen 
+10/14/2025,Emily,27733,27734,1,Gas 
+10/14/2025,Emily,27734,27754,20,Meet Elsa Academy 
+10/15/2025,Emily,28136,28169,33,Commute to Tyson
+10/15/2025,Emily,28169,28178,9,Tyson 
+10/15/2025,Emily,28178,28187,9,Tyson
+10/15/2025,Emily,28187,28220,33,Commute to Rebecca 
+10/15/2025,Emily,28220,28232,12,Rebecca 
+10/15/2025,Emily,28232,28249,17,Gas QT
+10/15/2025,Emily,28250,28258,8,Helen 
+10/15/2025,Emily,28258,28272,14,Pick up Rebecca 
+10/15/2025,Emily,28272,28284,12,Rebecca
+10/15/2025,Emily,28284,28291,7,Commute to Helen 
+10/15/2025,Emily,28291,28299,8,Helen 
+10/15/2025,Emily,28299,28323,24,Commute home 
+10/16/2025,Emily,28323,28344,21,Commute to Rebecca 
+10/16/2025,Emily,28344,28360,16,Rebecca 
+10/16/2025,Emily,28360,28377,17,Rebecca 
+10/16/2025,Emily,28377,28388,11,Pick up sunglasses 
+10/16/2025,Emily,28388,28394,6,Commute to Dick 
+10/16/2025,Emily,28395,28395,0,Dick 
+10/16/2025,Emily,28395,28459,64,Gas
+10/16/2025,Emily,28459,28480,21,Pick up equipment for donation/dropp off at AGE
+10/16/2025,Emily,28480,28500,20,Commute home 
+10/17/2025,Emily,28500,28536,36,Commute to Judie
+10/17/2025,Emily,28536,28590,54,Judie 
+10/17/2025,Emily,28590,28611,21,Commute to work 
+10/17/2025,Emily,28611,28636,25,Commute home 
+10/18/2025,Emily,28637,28645,8,Gas/vacuum inside of Kia 
+10/18/2025,Emily,28645,28669,24,Commute to Airport 
+10/18/2025,Emily,28670,28745,75,Mirlita 
+10/18/2025,Emily,28745,28803,58,Commute home
+10/18/2025,Emily,28803,28813,10,Take Kia to Theresa's 
+9/17/2025,Adrienne,43236,43249,13,
+9/17/2025,Adrienne,43249,43258,9,to fiesta for mtg
+9/17/2025,Adrienne,43258,43284,26,commute
+9/17/2025,Adrienne,43284,43300,16,Robert Duane G
+9/17/2025,Adrienne,43300,43324,24,Commute back home from Elgin 
+9/18/2022,Adrienne,43324,43330,6,
+11/3/2025,Adrienne,43336,43349,13,Commute home 
+9/22/2025,Adrienne,43395,43406,11,Commute
+9/22/2025,Adrienne,43406,43413,7,Chris Lay
+9/22/2025,Adrienne,43413,43421,8,
+9/22/2025,Adrienne,43421,43422,1,Daryl 
+9/22/2025,Adrienne,43422,43434,12,Commute home
+9/24/2022,Adrienne,43795,43811,16,commute home
+9/18/2022,Adrienne,43811,43834,23,
+9/25/2025,Adrienne,43811,43836,25,Commute to Jennie
+9/25/2025,Adrienne,43836,43896,60,
+10/2/2025,Adrienne ,44659,44677,18,Commute home 
+10/3/2025,Adrienne,44677,44684,7,Commute to Linda
+10/3/2025,Adrienne,44684,44700,16,Linda
+10/3/2025,Adrienne,44700,44717,17,Linda 
+10/3/2025,Adrienne,44717,44721,4,Commute home
+10/6/2025,Adrienne,44721,44750,29,Commute to Melissa 
+10/6/2025,Adrienne,44750,44786,36,Melissa
+10/6/2025,Adrienne,44786,44796,10,Getting gas
+10/6/2025,Adrienne,44786,44803,17,Commute to Brenda
+10/6/2025,Adrienne,44803,44805,2,Brenda C.
+10/6/2025,Adrienne,44805,44831,26,Commute home 
+10/7/2025,Adrienne,44831,44841,10,Drop Kia get Van
+10/8/2025,Adrienne,44898,44907,9,Lisa 
+10/8/2025,Adrienne,44907,44932,25,Commute to Rebecca 
+10/8/2025,Adrienne,44932,44943,11,Rebeca
+10/8/2025,Adrienne,44943,44963,20,Commute home 
+10/9/2025,Adrienne,44963,44983,20,Commute to Rebecca
+10/9/2025,Adrienne,44983,45001,18,Rebecca
+10/9/2025,Adrienne,45001,45016,15,Rebecca 
+10/9/2025,Adrienne,45016,45039,23,Commute to Linda pick up 
+10/9/2025,Adrienne,45039,45042,3,Linda
+10/9/2025,Adrienne,45042,45061,19,Meet Elsa for shirts
+10/9/2025,Adrienne,45061,45075,14,Commute home 
+10/10/2025,Adrienne,45075,45078,3,Gas
+10/10/2025,Adrienne,45078,45106,28,Commute to Lisa
+10/10/2025,Adrienne,45106,45116,10,Lisa
+10/10/2025,Adrienne,45116,45126,10,Lisa 
+10/10/2025,Adrienne,45126,45141,15,Commute to Georgetown work comfor keepers 
+10/10/2025,Adrienne,45141,45161,20,Commute home 
+10/13/2025,Adrienne,45161,45188,27,Commute to Melissa 
+10/13/2025,Adrienne,45188,45224,36,Melissa 
+10/13/2025,Adrienne,45224,45232,8,Store
+10/13/2025,Adrienne,45232,45234,2,Meet Elsa 
+10/14/2025,Adrienne,45384,45405,21,Commute home
+11/3/2025,Adrienne,46280,46293,13,Commute to Daryl 
+11/3/2025,Adrienne,46293,46294,1,Daryl
+11/3/2025,Adrienne,46294,46307,13,Pick up Chris
+11/3/2025,Adrienne,46307,46314,7,Chris
+11/3/2025,Adrienne,46314,46319,5,Pick up jacket
+11/3/2025,Adrienne,46319,46331,12,Gas
+11/3/2025,Adrienne,46331,46335,4,Pick up Daryl
+11/3/2025,Adrienne,46335,46336,1,Daryl
+11/13/2025,Adrienne,47024,47115,91,Commute to Burnet 
+11/13/2025,Adrienne,47115,47147,32,Barry
+11/13/2025,Adrienne,47147,47206,59,Commute home 
+11/19/2025,Adrienne ,47310,47314,4,Pick up Linda 
+11/19/2025,Adrienne ,47314,47346,32,Linda 
+11/19/2025,Adrienne ,47346,47350,4,Commute home 
+11/19/2025,Adrienne ,47350,47407,57,Commute to Burnet 
+11/19/2025,Adrienne ,47407,47509,102,Barry 
+11/19/2025,Adrienne ,47509,47584,75,Commute home/gas
+10/1/2025,Dave,65182,65194,12,Doug 
+10/1/2025,Dave,65182,65203,21,
+10/22/2025,Dave,66955,66959,4,Commute to Linda 
+10/22/2025,Dave,66959,66978,19,Linda
+10/22/2025,Dave,66978,66998,20,Commute home
+10/22/2025,Dave,66998,67018,20,Commute to Doug 
+10/22/2025,Dave,67018,67044,26,Doug 
+10/22/2025,Dave,67044,67069,25,Commute to Elsa’s house /stopped for gas
+9/25/2025,Maria,119953,119980,27,Jennie
+10/1/2025,Maria,120368,120374,6,
+10/1/2025,Maria,120374,120389,15,Cindy
+10/1/2025,Maria,120389,120409,20,
+10/1/2025,Maria,120409,120431,22,John
+10/1/2025,Maria,120431,120443,12,
+10/2/2025,Maria,120443,120498,55,Commute to smithville 
+10/2/2025,Maria,120498,120499,1,Bruce
+10/2/2025,Maria,120499,120545,46,Commute to Theresa's 
+10/7/2025,Maria,120703,120715,12,Commute home
+10/7/2025,Maria,120715,120729,14,Commute to Myron 
+10/7/2025,Maria,120729,120744,15,Myron 
+10/7/2025,Maria,120744,120758,14,Myron
+10/7/2025,Maria,120758,120774,16,Commute home 
+10/8/2025,Maria,120774,120792,18,Commute to Doug
+10/8/2025,Maria,120792,120805,13,Doug
+10/8/2025,Maria,120805,120821,16,Doing
+10/8/2025,Maria,120821,120849,28,Pick up Kia
+10/22/2025,Maria,121463,121474,11,Commute home 
+10/23/2025,Maria,121474,121498,24,Commute to Diane Belmont 
+10/23/2025,Maria,121498,121520,22,Diane 
+10/23/2025,Maria,121520,121542,22,Commute home
+10/23/2025,Maria,121542,121556,14,Gas/commute to Diane 
+10/23/2025,Maria,121556,121591,35,Diane
+10/23/2025,Maria,121591,121624,33,Commute home 
+10/24/2023,Maria,121624,121635,11,Commute to Vern
+10/24/2023,Maria,121635,121639,4,Vern
+10/24/2023,Maria,121639,121648,9,Commute home 
+10/26/2025,Maria,121648,121657,9,Commute to Joan
+10/26/2025,Maria,121657,121664,7,Joan
+10/26/2025,Maria,121664,121673,9,Commute home
+10/26/2025,Maria,121673,121683,10,Joan
+10/26/2025,Maria,121683,121691,8,Joan
+10/26/2025,Maria,121691,121702,11,Commute home 
+10/27/2025,Maria,121702,121719,17,Commute to Chris
+10/27/2025,Maria,121719,121725,6,Chris
+10/27/2025,Maria,121725,121729,4,Go to store 
+10/27/2025,Maria,121729,121739,10,Commute to Daryl
+10/27/2025,Maria,121739,121740,1,Daryl
+10/27/2025,Maria,121740,121747,7,CVS 
+10/27/2025,Maria,121749,121755,6,Chris
+10/27/2025,Maria,121755,121772,17,Commute home 
+10/28/2025,Maria,121772,121774,2,Gas
+10/28/2025,Maria,121774,121777,3,Commute to Christi
+10/28/2025,Maria,121777,121815,38,Christi
+10/28/2025,Maria,121815,121820,5,Home to grab lunch 
+10/28/2025,Maria,121820,121826,6,Pick up Susan 
+10/28/2025,Maria,121826,121845,19,Susan 
+10/28/2025,Maria,121845,121860,15,Commute to Helen
+10/28/2025,Maria,121860,121874,14,Helen
+10/28/2025,Maria,121874,121894,20,Commute back to Susan 
+10/28/2025,Maria,121894,121909,15,Susan 
+10/29/2025,Maria,121897,122015,118,Jennie 
+10/28/2025,Maria,121909,121915,6,Commute home 
+10/29/2025,Maria,121915,121920,5,Commute to Susan
+10/29/2025,Maria,121920,121939,19,Susan
+10/29/2025,Maria,121940,121945,5,Commute to Daryl 
+10/29/2025,Maria,121946,121950,4,Pick up Susan 
+10/29/2025,Maria,121946,121946,0,Daryl 
+10/29/2025,Maria,121950,121966,16,Susan 
+10/29/2025,Maria,121966,121987,21,Pick up Jennie
+10/29/2025,Maria,122015,122040,25,Commute home 
+10/30/2025,Maria,122040,122043,3,Gas/air
+10/30/2025,Maria,122043,122046,3,Commute to Susan
+10/30/2025,Maria,122047,122062,15,Susan 
+10/30/2025,Maria,122062,122081,19,Commute to Helen 
+10/30/2025,Maria,122081,122090,9,Helen 
+10/30/2025,Maria,122090,122110,20,Home for lunch 
+11/3/2025,Maria,122615,122636,21,Commute to Helen
+11/3/2025,Maria,122636,122651,15,Helen 
+11/3/2025,Maria,122651,122676,25,Commute home 
+11/4/2025,Maria,122676,122696,20,Commute to Leobardo
+11/4/2025,Maria,122696,122786,90,Leobardo
+11/4/2025,Maria,122786,122807,21,Commute home 
+11/4/2025,Maria,122807,122824,17,Commute to Daryl 
+11/4/2025,Maria,122824,122825,1,Daryl 
+11/4/2025,Maria,122825,122831,6,Commute to Karin 
+11/4/2025,Maria,122831,122835,4,Karin 
+11/4/2025,Maria,122835,122842,7,Pick up Daryl 
+11/4/2025,Maria,122842,122843,1,Daryl 
+11/4/2025,Maria,122843,122851,8,Pick up Karin
+11/4/2025,Maria,122851,122855,4,Karin
+11/4/2025,Maria,122855,122876,21,HEB
+11/4/2025,Maria,122876,122877,1,Commute home 
+11/10/2025,Maria,122877,122921,44,Commute to Lisa
+11/10/2025,Maria,122921,122932,11,Lisa F 
+11/10/2025,Maria,122932,122963,31,Commute home 
+11/10/2025,Maria,122963,122965,2,Gas
+11/10/2025,Maria,122965,122969,4,Pick up Susan 
+11/10/2025,Maria,122969,122990,21,Susan
+11/10/2025,Maria,122990,123020,30,CK Georgetown 
+11/10/2025,Maria,123020,123042,22,Commute home 
+11/11/2025,Maria,123042,123080,38,Commute to Jarrell 
+11/11/2025,Maria,123081,123155,74,Bobby
+11/11/2025,Maria,123155,123192,37,Commute hime 
+11/12/2025,Maria,123192,123210,18,Commute to Gloria
+11/12/2025,Maria,123210,123230,20,Gloria 
+11/12/2025,Maria,123230,123252,22,Home
+11/12/2025,Maria,123252,123267,15,Pick up Doug 
+11/12/2025,Maria,123267,123293,26,Doug
+11/12/2025,Maria,123293,123322,29,Commute to Dr Susan 
+11/12/2025,Maria,123322,123331,9,Dr Susan 
+11/12/2025,Maria,123331,123353,22,Commute home 
+11/13/2025,Maria,123353,123408,55,Commute to Smithville 
+11/13/2025,Maria,123408,123423,15,Bruce 
+9/18/2022,Jim,125524,125542,18,Susan Herman 
+9/18/2022,Jim ,125542,125549,7,
+9/18/2022,Jim ,125549,125551,2,Daryl Markham
+9/18/2022,Jim,125562,125569,7,Tina Pacheco
+9/18/2022,Jim,125569,125583,14,commute + waiting
+9/18/2022,Jim,125583,125605,22,Stephen Ku
+9/24/2022,Jim,125879,125895,16,commute
+9/24/2022,Jim,125895,125909,14,Doug
+9/24/2022,Jim,125909,125926,17,
+9/24/2022,Jim,125926,125927,1,Daryl
+9/24/2022,Jim,125927,125935,8,
+9/24/2022,Jim,125936,125938,2,Carol
+9/24/2022,Jim,125938,125951,13,
+9/24/2022,Jim,125951,125959,8,Jack
+9/24/2022,Jim,125959,125961,2,
+9/24/2022,Jim,125961,125964,3,Carol
+9/24/2022,Jim,125964,125969,5,
+9/24/2022,Jim,125969,125976,7,Jack
+9/24/2022,Jim,125976,125998,22,
+9/25/2025,Jim,126078,126090,12,Jack
+9/25/2025,Jim,126090,126122,32,Commute home
+9/26/2025,Jim,126123,126127,4,Commute to Sanjay
+9/26/2025,Jim,126127,126131,4,Sanjars
+9/26/2025,Jim,126131,126135,4,Oil change 
+9/26/2025,Jim,126135,126139,4,Commute home
+9/29/2025,Jim,126139,126164,25,Commute to Scott house is probably the longer one
+10/1/2025,Adrienne ,44619,44630,11,Lisa
