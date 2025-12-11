@@ -46,6 +46,36 @@ if not st.user.is_logged_in:
 st.caption(f"Logged in as: {st.user.email}")
 
 # ---------------------------
+# Authentication gate
+# ---------------------------
+if not st.user.is_logged_in:
+    st.title("🚗 Mileage Dashboard")
+    st.write("Please log in to access this app.")
+
+    # Uses the [auth] config from your Streamlit secrets
+    if st.button("Log in with Google"):
+        st.login()
+
+    st.stop()
+
+# Show who logged in
+st.caption(f"Logged in as: {st.user.email}")
+
+# ---------------------------
+# Authorization (whitelist)
+# ---------------------------
+ALLOWED_EMAILS = {
+    "your_email@gmail.com",
+    "friend_email@gmail.com",
+    # add others here
+}
+
+if st.user.email not in ALLOWED_EMAILS:
+    st.error("🚫 You are not authorized to access this application.")
+    st.stop()
+
+
+# ---------------------------
 # Data loading using your code
 # ---------------------------
 @st.cache_data
