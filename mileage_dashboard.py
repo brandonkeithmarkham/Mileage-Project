@@ -19,7 +19,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
-
+import io
 import mileage_process as mp  # your existing script
 
 # ---------------------------
@@ -109,6 +109,44 @@ def load_data():
 
     return sources, raw_df, df, summary
 
+# ---------------------------
+# Build master Excel workbook (Summary + Details), like mileage_process.py
+# ---------------------------
+def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
+    """
+    Create an in-memory Excel file with:
+      - 'Summary' sheet: aggregated mileage by vehicle
+      - 'Details' sheet: all prepared rows
+
+    Mirrors the structure of mileage_report.xlsx from mileage_process.py.
+    """
+    # Match the column renames used in save_outputs()
+    summary_export = summary.rename(
+        columns={
+            "Commute_Miles": "Commute Miles",
+            "Business_Miles": "Business Miles",
+            "Total_Miles": "Total Miles",
+        }
+    )
+
+    buffer = io.BytesIO()
+    with pd.ExcelWriter(buffer, engine="xlsxwriter") as writer:
+        # Summary sheet
+        summary_export.reset_index().to_excel(writer, sheet_name="Summary", index=False)
+
+        # Details sheet
+        details_view = df.copy()
+        # Make the helper columns nicer, like in mileage_process.py
+        details_view = details_view.rename(
+            columns={
+                "_is_commute": "Is_Commute",
+                "_row_ok": "Row_OK",
+            }
+        )
+        details_view.to_excel(writer, index=False, sheet_name="Details")
+
+    buffer.seek(0)
+    return buffer
 
 
 def main():
@@ -125,6 +163,22 @@ def main():
         )
         return
 
+    # ---------------------------
+    # Master export download
+    # ---------------------------
+    st.subheader("Export")
+
+    master_excel = build_master_excel(df, summary)
+
+    st.download_button(
+        label="📥 Download full master Excel report (all drivers, all vehicles)",
+        data=master_excel,
+        file_name="mileage_report.xlsx",
+        mime=(
+            "application/vnd.openxmlformats-officedocument."
+            "spreadsheetml.sheet"
+        ),
+    )
 
     # ---------------------------
     # Sidebar: basic info + filters
