@@ -17,9 +17,20 @@ Run with:
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import pandas as pd
 import streamlit as st
 
 import mileage_process as mp  # your existing script
+
+# ---------------------------
+# Driver → Google Sheet (published CSV) mapping
+# ---------------------------
+DRIVER_SHEET_URLS = {
+     "Matthew":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTGcp1pt0bM4eKOdeUIn7jp4PIiuVf5Q2snBk8Tr9fc0kQg553-tObI58fyH4fcozmd3WgYwF6RJcJk/pub?gid=0&single=true&output=csv",
+     "Yuri":"https://docs.google.com/spreadsheets/d/e/2PACX-1vSKC_Kj5Jbravp-RpmOOeZd_JxVQug1Jq4mt1gCYFIRL88GPO8fEwNCaooH47rGJTKdKjD18ceHF9TU/pub?gid=0&single=true&output=csv",
+     "Theresa":"https://docs.google.com/spreadsheets/d/e/2PACX-1vRoqxBfrk20Hlb-foWIhLqBQwYDoYQzJ7XUKnScd5WjxM5XHr5MmBGECkCAh62oq3zXI3tMxkVLFgMP/pub?gid=0&single=true&output=csv",
+}
+
 
 
 # ---------------------------
@@ -45,21 +56,6 @@ if not st.user.is_logged_in:
 # Optional: show who is logged in
 st.caption(f"Logged in as: {st.user.email}")
 
-# ---------------------------
-# Authentication gate
-# ---------------------------
-if not st.user.is_logged_in:
-    st.title("🚗 Mileage Dashboard")
-    st.write("Please log in to access this app.")
-
-    # Uses the [auth] config from your Streamlit secrets
-    if st.button("Log in with Google"):
-        st.login()
-
-    st.stop()
-
-# Show who logged in
-st.caption(f"Logged in as: {st.user.email}")
 
 # ---------------------------
 # Authorization (whitelist)
@@ -75,23 +71,44 @@ if st.user.email not in ALLOWED_EMAILS:
     st.stop()
 
 
+
 # ---------------------------
-# Data loading using your code
+# Data loading using your code, but from Google Sheets
 # ---------------------------
-@st.cache_data
+@st.cache_data(ttl=300)  # cache 5 minutes to avoid hammering Google
 def load_data():
     """
-    Use your existing pipeline to:
-    - find CSVs
-    - load them
-    - normalize & prepare
-    - aggregate by vehicle
+    Load mileage data from the published Google Sheets for each driver,
+    then reuse the existing mileage_process pipeline.
     """
-    csv_files = mp.pick_input_csvs()
-    raw_df = mp.load_all_csvs(csv_files)
+    frames = []
+    for driver_name, sheet_url in DRIVER_SHEET_URLS.items():
+        try:
+            tmp = pd.read_csv(sheet_url)
+        except Exception as e:
+            # If one sheet is broken, skip it but log a warning in the UI later
+            # You could also collect these errors in a list if you want.
+            continue
+
+        # Tag each row with the driver name
+        tmp["Driver"] = driver_name
+        frames.append(tmp)
+
+    if not frames:
+        raise SystemExit("No driver sheets could be loaded. Check DRIVER_SHEET_URLS.")
+
+    # Combine all driver sheets into one raw DataFrame
+    raw_df = pd.concat(frames, ignore_index=True)
+
+    # Reuse your existing processing logic
     df = mp.load_and_prepare(raw_df)
     summary = mp.aggregate_by_vehicle(df)
-    return csv_files, raw_df, df, summary
+
+    # Instead of CSV files, we just keep a list of driver names as "sources"
+    sources = list(DRIVER_SHEET_URLS.keys())
+
+    return sources, raw_df, df, summary
+
 
 
 def main():
@@ -99,33 +116,55 @@ def main():
 
     # Try to load data; show a friendly error if no files are found
     try:
-        csv_files, raw_df, df, summary = load_data()
-    except SystemExit:
+        sources, raw_df, df, summary = load_data()
+    except SystemExit as e:
         st.error(
-            "No valid mileage CSV files found.\n\n"
-            "Place your mileage CSVs in this folder (same as mileage_dashboard.py) "
-            "and ensure their names contain 'Mileage', or are .csv files."
+            "No driver mileage data could be loaded.\n\n"
+            "Check that DRIVER_SHEET_URLS is populated with valid published "
+            "Google Sheets CSV URLs and that the sheets are accessible."
         )
         return
+
 
     # ---------------------------
     # Sidebar: basic info + filters
     # ---------------------------
     st.sidebar.header("Filters")
 
-    st.sidebar.markdown("**Source CSV files:**")
-    for p in csv_files:
-        st.sidebar.write(f"- `{Path(p).name}`")
+    # Show which drivers are configured as data sources
+    st.sidebar.markdown("**Drivers (data sources):**")
+    for name in sources:
+        st.sidebar.write(f"- {name}")
 
-    vehicles = sorted(summary.index.tolist())
+    # --- Driver filter ---
+    if "Driver" in df.columns:
+        driver_list = sorted(df["Driver"].dropna().unique())
+    else:
+        driver_list = []
+
+    selected_drivers = st.sidebar.multiselect(
+        "Filter by driver:", driver_list, default=driver_list
+    )
+
+    # Apply driver filter to the prepared dataframe
+    df_filtered = df.copy()
+    if selected_drivers and "Driver" in df_filtered.columns:
+        df_filtered = df_filtered[df_filtered["Driver"].isin(selected_drivers)]
+
+    # Recompute summary based on driver-filtered data
+    summary_driver = mp.aggregate_by_vehicle(df_filtered)
+
+    # --- Vehicle filter (based on driver-filtered summary) ---
+    vehicles = sorted(summary_driver.index.tolist())
     selected_vehicles = st.sidebar.multiselect(
         "Select vehicle(s):", vehicles, default=vehicles
     )
 
     if selected_vehicles:
-        filtered_summary = summary.loc[selected_vehicles]
+        filtered_summary = summary_driver.loc[selected_vehicles]
     else:
-        filtered_summary = summary
+        filtered_summary = summary_driver
+
 
     # Rename columns for display (match your CSV header style)
     summary_display = filtered_summary.rename(
@@ -238,15 +277,15 @@ def main():
             "This is the fully prepared dataset after column normalization, "
             "mileage calculation, and commute flagging."
         )
-        st.dataframe(df, use_container_width=True)
+        st.dataframe(df_filtered, use_container_width=True)
 
     with tab2:
-        st.markdown("This is the raw combined DataFrame loaded from all CSVs.")
+        st.markdown("This is the raw combined DataFrame loaded from all driver Google Sheets.")
         st.dataframe(raw_df, use_container_width=True)
 
     with tab3:
         st.markdown("Rows with NaN or negative miles (if any).")
-        issues = df[~df["_row_ok"]].copy()
+        issues = df_filtered[~df_filtered["_row_ok"]].copy()
         if issues.empty:
             st.success("✅ No row-level issues detected.")
         else:
