@@ -115,14 +115,17 @@ def load_data():
 # ---------------------------
 def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
     """
-    Creates a master Excel workbook with clear formatting using xlsxwriter:
-    - Auto-fit columns
-    - Header styling (bold + yellow fill)
-    - Borders on all cells
-    - Frozen header row
-    """
+    Create an in-memory Excel file with:
+      - 'Summary' sheet: aggregated mileage by vehicle
+      - 'Details' sheet: all prepared rows
 
-    # Rename columns for consistency
+    Styling (via xlsxwriter):
+      - Bold yellow header row
+      - Borders around all cells
+      - Auto-fit columns
+      - Frozen header row
+    """
+    # Rename columns for consistency with your reports
     summary_export = summary.rename(
         columns={
             "Commute_Miles": "Commute Miles",
@@ -135,47 +138,59 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
     # Use xlsxwriter engine
     with pd.ExcelWriter(buffer, engine="xlsxwriter") as writer:
-        # Write worksheets
-        summary_export.reset_index().to_excel(writer, sheet_name="Summary", index=False)
-        df.to_excel(writer, sheet_name="Details", index=False)
+        # Write data first (let pandas handle NaNs etc.)
+        summary_df = summary_export.reset_index()
+        details_df = df.copy()
+
+        summary_df.to_excel(writer, sheet_name="Summary", index=False)
+        details_df.to_excel(writer, sheet_name="Details", index=False)
 
         workbook = writer.book
-        header_format = workbook.add_format({
-            "bold": True,
-            "bg_color": "#FFFF99",
-            "border": 1
-        })
-        cell_format = workbook.add_format({
-            "border": 1
-        })
 
-        # Format both sheets in same way
-        for sheet_name in ["Summary", "Details"]:
-            worksheet = writer.sheets[sheet_name]
+        # Styles
+        header_format = workbook.add_format(
+            {"bold": True, "bg_color": "#FFFF99", "border": 1}
+        )
+        cell_border = workbook.add_format({"border": 1})
 
-            # Freeze the first row
-            worksheet.freeze_panes(1, 0)
-
-            # Get dataframe for this sheet
-            data = summary_export.reset_index() if sheet_name == "Summary" else df
+        # Helper to style a sheet
+        def style_sheet(sheet_name: str, data: pd.DataFrame) -> None:
+            ws = writer.sheets[sheet_name]
             n_rows, n_cols = data.shape
 
-            # Apply formatting to header
-            for col_idx, col_name in enumerate(data.columns):
-                worksheet.write(0, col_idx, col_name, header_format)
+            # Freeze header row
+            ws.freeze_panes(1, 0)
 
-            # Apply borders + compute column widths
+            # Header styling + column widths
             for col_idx, col_name in enumerate(data.columns):
-                column_width = max(len(str(col_name)), 8)
-                for row_idx in range(1, n_rows + 1):
-                    cell_value = data.iloc[row_idx - 1, col_idx]
-                    worksheet.write(row_idx, col_idx, cell_value, cell_format)
-                    column_width = max(column_width, len(str(cell_value)))
+                # Overwrite header cell with styling
+                ws.write(0, col_idx, col_name, header_format)
 
-                worksheet.set_column(col_idx, col_idx, column_width + 2)
+                # Auto-fit: max length of header or any cell in this column
+                col_series = data[col_name].astype(str)
+                max_len = max(col_series.map(len).max() if not col_series.empty else 0,
+                              len(str(col_name)))
+                ws.set_column(col_idx, col_idx, max_len + 2)
+
+            # Apply borders to all used cells via conditional formatting
+            if n_cols > 0:
+                # rows 0..n_rows, cols 0..n_cols-1
+                ws.conditional_format(
+                    0, 0, n_rows, n_cols - 1,
+                    {"type": "no_blanks", "format": cell_border},
+                )
+                ws.conditional_format(
+                    0, 0, n_rows, n_cols - 1,
+                    {"type": "blanks", "format": cell_border},
+                )
+
+        # Style both sheets
+        style_sheet("Summary", summary_df)
+        style_sheet("Details", details_df)
 
     buffer.seek(0)
     return buffer
+
 
 
 
