@@ -64,7 +64,10 @@ st.caption(f"Logged in as: {st.user.email}")
 ALLOWED_EMAILS = {
     "brandonkeithmarkham@gmail.com",
     "laura.miggins@gmail.com",
-    "jasonlee091488@gmail.com"
+    "jasonlee091488@gmail.com",
+    "elderwheelsatx@gmail.com",
+    "elderewheelsoffice@gmail.com",
+    "sacredrootsaustin@gmail.com"
 }
 
 if st.user.email not in ALLOWED_EMAILS:
