@@ -45,7 +45,7 @@ st.set_page_config(
 )
 
 # ---------------------------
-# Debug logger
+# Debug logger (stores messages; only renders if DEBUG_MODE True)
 # ---------------------------
 def dbg(msg: str, data=None):
     """
@@ -96,6 +96,14 @@ if st.user.email not in ALLOWED_EMAILS:
     st.stop()
 
 # ---------------------------
+# Debug access control (only you)
+# ---------------------------
+DEBUG_ALLOWED_EMAILS = {"brandonkeithmarkham@gmail.com"}
+
+def can_debug() -> bool:
+    return bool(getattr(st.user, "is_logged_in", False)) and (getattr(st.user, "email", "") in DEBUG_ALLOWED_EMAILS)
+
+# ---------------------------
 # Data loading using your code, but from Google Sheets
 # ---------------------------
 @st.cache_data(ttl=300)  # cache 5 minutes to avoid hammering Google
@@ -107,8 +115,6 @@ def load_data():
     frames = []
     sheet_errors = []
 
-    # NOTE: cache_data functions can't reliably use st.write,
-    # but they *can* return debug info (we’ll show it in main).
     for driver_name, sheet_url in DRIVER_SHEET_URLS.items():
         try:
             tmp = pd.read_csv(sheet_url)
@@ -130,7 +136,6 @@ def load_data():
 
     sources = list(DRIVER_SHEET_URLS.keys())
 
-    # Return errors too (for debugging display)
     return sources, raw_df, df, summary, sheet_errors
 
 # ---------------------------
@@ -206,18 +211,22 @@ def main():
     st.title("🚗 Mileage Dashboard")
 
     # ---------------------------
-    # Debug UI
+    # Debug UI (ADMIN ONLY)
     # ---------------------------
-    with st.sidebar:
-        st.markdown("### Debug")
-        st.session_state.DEBUG_MODE = st.toggle("Enable debug mode", value=False)
+    if can_debug():
+        with st.sidebar:
+            st.markdown("### Debug (Admin)")
+            st.session_state.DEBUG_MODE = st.toggle("Enable debug mode", value=False)
 
-        if st.button("Clear debug log"):
-            st.session_state.debug_log = []
+            if st.button("Clear debug log"):
+                st.session_state.debug_log = []
 
-        if st.session_state.get("DEBUG_MODE", False) and st.session_state.get("debug_log"):
-            st.markdown("**Debug log:**")
-            st.code("\n".join(st.session_state.debug_log[-250:]))
+            if st.session_state.get("DEBUG_MODE", False) and st.session_state.get("debug_log"):
+                st.markdown("**Debug log:**")
+                st.code("\n".join(st.session_state.debug_log[-250:]))
+    else:
+        # Force debug off for everyone else
+        st.session_state.DEBUG_MODE = False
 
     try:
         dbg("App start: entering main()")
@@ -237,14 +246,14 @@ def main():
             "sheet_errors_count": len(sheet_errors),
         })
 
-        if sheet_errors:
-            st.warning("Some driver sheets failed to load (dashboard may be missing some data).")
-            if st.session_state.get("DEBUG_MODE", False):
-                st.write(sheet_errors)
+        # Only show sheet load errors to admin in debug mode
+        if sheet_errors and can_debug() and st.session_state.get("DEBUG_MODE", False):
+            st.warning("Some driver sheets failed to load (admin view).")
+            st.write(sheet_errors)
 
         if df is None or summary is None:
             dbg("ERROR: df or summary is None", {"df_is_none": df is None, "summary_is_none": summary is None})
-            st.error("Data processing returned None unexpectedly. Enable debug mode for details.")
+            st.error("Data processing returned None unexpectedly. Please contact Brandon.")
             st.stop()
 
         # ---------------------------
@@ -255,7 +264,7 @@ def main():
         dbg("Building master Excel")
         master_excel = build_master_excel(df, summary)
 
-        # ✅ IMPORTANT: pass bytes, not BytesIO
+        # ✅ pass bytes, not BytesIO
         excel_bytes = master_excel.getvalue()
         dbg("Master Excel built", {"bytes_len": len(excel_bytes)})
 
@@ -421,8 +430,14 @@ def main():
 
     except Exception as e:
         dbg("FATAL EXCEPTION hit", str(e))
-        st.error("The app crashed. The traceback below shows exactly where.")
-        st.code(traceback.format_exc())
+
+        # Client-safe message
+        st.error("Something went wrong. Please contact Brandon for support.")
+
+        # Only show traceback to admin when debug toggle is enabled
+        if can_debug() and st.session_state.get("DEBUG_MODE", False):
+            st.code(traceback.format_exc())
+
         st.stop()
 
 if __name__ == "__main__":
