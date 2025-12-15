@@ -23,16 +23,18 @@ import io
 import xlsxwriter
 import mileage_process as mp  # your existing script
 
+# ✅ Debug helpers
+import traceback
+import time
+
 # ---------------------------
 # Driver → Google Sheet (published CSV) mapping
 # ---------------------------
 DRIVER_SHEET_URLS = {
-     "Matthew":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTGcp1pt0bM4eKOdeUIn7jp4PIiuVf5Q2snBk8Tr9fc0kQg553-tObI58fyH4fcozmd3WgYwF6RJcJk/pub?gid=0&single=true&output=csv",
-     "Yuri":"https://docs.google.com/spreadsheets/d/e/2PACX-1vSKC_Kj5Jbravp-RpmOOeZd_JxVQug1Jq4mt1gCYFIRL88GPO8fEwNCaooH47rGJTKdKjD18ceHF9TU/pub?gid=0&single=true&output=csv",
-     "Theresa":"https://docs.google.com/spreadsheets/d/e/2PACX-1vRoqxBfrk20Hlb-foWIhLqBQwYDoYQzJ7XUKnScd5WjxM5XHr5MmBGECkCAh62oq3zXI3tMxkVLFgMP/pub?gid=0&single=true&output=csv",
+    "Matthew": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGcp1pt0bM4eKOdeUIn7jp4PIiuVf5Q2snBk8Tr9fc0kQg553-tObI58fyH4fcozmd3WgYwF6RJcJk/pub?gid=0&single=true&output=csv",
+    "Yuri": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKC_Kj5Jbravp-RpmOOeZd_JxVQug1Jq4mt1gCYFIRL88GPO8fEwNCaooH47rGJTKdKjD18ceHF9TU/pub?gid=0&single=true&output=csv",
+    "Theresa": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoqxBfrk20Hlb-foWIhLqBQwYDoYQzJ7XUKnScd5WjxM5XHr5MmBGECkCAh62oq3zXI3tMxkVLFgMP/pub?gid=0&single=true&output=csv",
 }
-
-
 
 # ---------------------------
 # Streamlit page config
@@ -41,6 +43,28 @@ st.set_page_config(
     page_title="Mileage Dashboard",
     layout="wide",
 )
+
+# ---------------------------
+# Debug logger
+# ---------------------------
+def dbg(msg: str, data=None):
+    """
+    Lightweight debug logger:
+    - stores messages in st.session_state.debug_log
+    - optionally renders live when DEBUG_MODE is enabled
+    """
+    if "debug_log" not in st.session_state:
+        st.session_state.debug_log = []
+
+    stamp = time.strftime("%H:%M:%S")
+    line = f"[{stamp}] {msg}"
+    st.session_state.debug_log.append(line)
+
+    if st.session_state.get("DEBUG_MODE", False):
+        st.write(line)
+        if data is not None:
+            st.write(data)
+
 # ---------------------------
 # Authentication gate
 # ---------------------------
@@ -48,15 +72,12 @@ if not st.user.is_logged_in:
     st.title("🚗 Mileage Dashboard")
     st.write("Please log in to access this app.")
 
-    # Uses the [auth] config from your Streamlit secrets
     if st.button("Log in with Google"):
-        st.login()  # default provider from [auth]
+        st.login()
 
-    st.stop()  # Don't run the rest of the app for anonymous users
+    st.stop()
 
-# Optional: show who is logged in
 st.caption(f"Logged in as: {st.user.email}")
-
 
 # ---------------------------
 # Authorization (whitelist)
@@ -67,14 +88,12 @@ ALLOWED_EMAILS = {
     "jasonlee091488@gmail.com",
     "elderwheelsatx@gmail.com",
     "elderewheelsoffice@gmail.com",
-    "sacredrootsaustin@gmail.com"
+    "sacredrootsaustin@gmail.com",
 }
 
 if st.user.email not in ALLOWED_EMAILS:
     st.error("🚫 You are not authorized to access this application.")
     st.stop()
-
-
 
 # ---------------------------
 # Data loading using your code, but from Google Sheets
@@ -86,35 +105,36 @@ def load_data():
     then reuse the existing mileage_process pipeline.
     """
     frames = []
+    sheet_errors = []
+
+    # NOTE: cache_data functions can't reliably use st.write,
+    # but they *can* return debug info (we’ll show it in main).
     for driver_name, sheet_url in DRIVER_SHEET_URLS.items():
         try:
             tmp = pd.read_csv(sheet_url)
+            tmp.columns = tmp.columns.str.strip()
+            tmp["Driver"] = driver_name
+            frames.append(tmp)
         except Exception as e:
-            # If one sheet is broken, skip it but log a warning in the UI later
-            # You could also collect these errors in a list if you want.
+            sheet_errors.append((driver_name, str(e)))
             continue
-        tmp.columns = tmp.columns.str.strip()    
-        # Tag each row with the driver name
-        tmp["Driver"] = driver_name
-        frames.append(tmp)
 
     if not frames:
         raise SystemExit("No driver sheets could be loaded. Check DRIVER_SHEET_URLS.")
 
-    # Combine all driver sheets into one raw DataFrame
     raw_df = pd.concat(frames, ignore_index=True)
 
     # Reuse your existing processing logic
     df = mp.load_and_prepare(raw_df)
     summary = mp.aggregate_by_vehicle(df)
 
-    # Instead of CSV files, we just keep a list of driver names as "sources"
     sources = list(DRIVER_SHEET_URLS.keys())
 
-    return sources, raw_df, df, summary
+    # Return errors too (for debugging display)
+    return sources, raw_df, df, summary, sheet_errors
 
 # ---------------------------
-# Build master Excel workbook (Summary + Details), like mileage_process.py
+# Build master Excel workbook (Summary + Details)
 # ---------------------------
 def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
     """
@@ -128,7 +148,6 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
       - Auto-fit columns
       - Frozen header row
     """
-    # Rename columns for consistency with your reports
     summary_export = summary.rename(
         columns={
             "Commute_Miles": "Commute Miles",
@@ -139,9 +158,7 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
     buffer = io.BytesIO()
 
-    # Use xlsxwriter engine
     with pd.ExcelWriter(buffer, engine="xlsxwriter") as writer:
-        # Write data first (let pandas handle NaNs etc.)
         summary_df = summary_export.reset_index()
         details_df = df.copy()
 
@@ -150,34 +167,26 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
         workbook = writer.book
 
-        # Styles
-        header_format = workbook.add_format(
-            {"bold": True, "bg_color": "#FFFF99", "border": 1}
-        )
+        header_format = workbook.add_format({"bold": True, "bg_color": "#FFFF99", "border": 1})
         cell_border = workbook.add_format({"border": 1})
 
-        # Helper to style a sheet
         def style_sheet(sheet_name: str, data: pd.DataFrame) -> None:
             ws = writer.sheets[sheet_name]
             n_rows, n_cols = data.shape
 
-            # Freeze header row
             ws.freeze_panes(1, 0)
 
-            # Header styling + column widths
             for col_idx, col_name in enumerate(data.columns):
-                # Overwrite header cell with styling
                 ws.write(0, col_idx, col_name, header_format)
 
-                # Auto-fit: max length of header or any cell in this column
                 col_series = data[col_name].astype(str)
-                max_len = max(col_series.map(len).max() if not col_series.empty else 0,
-                              len(str(col_name)))
+                max_len = max(
+                    col_series.map(len).max() if not col_series.empty else 0,
+                    len(str(col_name)),
+                )
                 ws.set_column(col_idx, col_idx, max_len + 2)
 
-            # Apply borders to all used cells via conditional formatting
             if n_cols > 0:
-                # rows 0..n_rows, cols 0..n_cols-1
                 ws.conditional_format(
                     0, 0, n_rows, n_cols - 1,
                     {"type": "no_blanks", "format": cell_border},
@@ -187,215 +196,234 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
                     {"type": "blanks", "format": cell_border},
                 )
 
-        # Style both sheets
         style_sheet("Summary", summary_df)
         style_sheet("Details", details_df)
 
     buffer.seek(0)
     return buffer
 
-
-
-
 def main():
     st.title("🚗 Mileage Dashboard")
-    if st.button("🔄 Refresh data now"):
-        st.cache_data.clear()
 
-    # Try to load data; show a friendly error if no files are found
+    # ---------------------------
+    # Debug UI
+    # ---------------------------
+    with st.sidebar:
+        st.markdown("### Debug")
+        st.session_state.DEBUG_MODE = st.toggle("Enable debug mode", value=False)
+
+        if st.button("Clear debug log"):
+            st.session_state.debug_log = []
+
+        if st.session_state.get("DEBUG_MODE", False) and st.session_state.get("debug_log"):
+            st.markdown("**Debug log:**")
+            st.code("\n".join(st.session_state.debug_log[-250:]))
+
     try:
-        sources, raw_df, df, summary = load_data()
-    except SystemExit as e:
-        st.error(
-            "No driver mileage data could be loaded.\n\n"
-            "Check that DRIVER_SHEET_URLS is populated with valid published "
-            "Google Sheets CSV URLs and that the sheets are accessible."
-        )
-        return
+        dbg("App start: entering main()")
 
-    # ---------------------------
-    # Master export download
-    # ---------------------------
-    st.subheader("Export")
+        if st.button("🔄 Refresh data now"):
+            dbg("Refresh requested: clearing cache_data")
+            st.cache_data.clear()
 
-    master_excel = build_master_excel(df, summary)
+        dbg("Calling load_data()")
+        sources, raw_df, df, summary, sheet_errors = load_data()
 
-    st.download_button(
-        label="📥 Download full master Excel report (all drivers, all vehicles)",
-        data=master_excel,
-        file_name="mileage_report.xlsx",
-        mime=(
-            "application/vnd.openxmlformats-officedocument."
-            "spreadsheetml.sheet"
-        ),
-    )
+        dbg("load_data() returned", {
+            "sources": sources,
+            "raw_df_shape": raw_df.shape if raw_df is not None else None,
+            "df_shape": df.shape if df is not None else None,
+            "summary_shape": summary.shape if summary is not None else None,
+            "sheet_errors_count": len(sheet_errors),
+        })
 
-    # ---------------------------
-    # Sidebar: basic info + filters
-    # ---------------------------
-    st.sidebar.header("Filters")
+        if sheet_errors:
+            st.warning("Some driver sheets failed to load (dashboard may be missing some data).")
+            if st.session_state.get("DEBUG_MODE", False):
+                st.write(sheet_errors)
 
-    # Show which drivers are configured as data sources
-    st.sidebar.markdown("**Drivers (data sources):**")
-    for name in sources:
-        st.sidebar.write(f"- {name}")
-
-    # --- Driver filter ---
-    if "Driver" in df.columns:
-        driver_list = sorted(df["Driver"].dropna().unique())
-    else:
-        driver_list = []
-
-    selected_drivers = st.sidebar.multiselect(
-        "Filter by driver:", driver_list, default=driver_list
-    )
-
-    # Apply driver filter to the prepared dataframe
-    df_filtered = df.copy()
-    if selected_drivers and "Driver" in df_filtered.columns:
-        df_filtered = df_filtered[df_filtered["Driver"].isin(selected_drivers)]
-
-    # Recompute summary based on driver-filtered data
-    summary_driver = mp.aggregate_by_vehicle(df_filtered)
-
-    # --- Vehicle filter (based on driver-filtered summary) ---
-    vehicles = sorted(summary_driver.index.tolist())
-    selected_vehicles = st.sidebar.multiselect(
-        "Select vehicle(s):", vehicles, default=vehicles
-    )
-
-    if selected_vehicles:
-        filtered_summary = summary_driver.loc[selected_vehicles]
-    else:
-        filtered_summary = summary_driver
-
-
-    # Rename columns for display (match your CSV header style)
-    summary_display = filtered_summary.rename(
-        columns={
-            "Commute_Miles": "Commute Miles",
-            "Business_Miles": "Business Miles",
-            "Total_Miles": "Total Miles",
-        }
-    ).round(2)
-
-    # ---------------------------
-    # Top-level metrics
-    # ---------------------------
-    st.subheader("Overall Mileage Totals")
-
-    total_business = filtered_summary["Business_Miles"].sum()
-    total_commute = filtered_summary["Commute_Miles"].sum()
-    total_miles = filtered_summary["Total_Miles"].sum()
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Business Miles", f"{total_business:,.1f}")
-    col2.metric("Commute Miles", f"{total_commute:,.1f}")
-    col3.metric("Total Miles", f"{total_miles:,.1f}")
-
-    # ---------------------------
-    # Summary table
-    # ---------------------------
-    st.subheader("Mileage Summary by Vehicle")
-    st.dataframe(summary_display, use_container_width=True)
+        if df is None or summary is None:
+            dbg("ERROR: df or summary is None", {"df_is_none": df is None, "summary_is_none": summary is None})
+            st.error("Data processing returned None unexpectedly. Enable debug mode for details.")
+            st.stop()
 
         # ---------------------------
-    # Charts
-    # ---------------------------
-    st.subheader("Charts")
+        # Export
+        # ---------------------------
+        st.subheader("Export")
 
-    # Layout: 2 charts side by side
-    chart_col1, chart_col2 = st.columns(2)
+        dbg("Building master Excel")
+        master_excel = build_master_excel(df, summary)
 
-    # 1) Total miles bar chart
-    with chart_col1:
-        st.markdown("**Total Miles by Vehicle**")
-        fig1, ax1 = plt.subplots()
-        ax1.bar(summary_display.index, summary_display["Total Miles"])
-        ax1.set_ylabel("Miles")
-        ax1.set_xlabel("Vehicle")
-        ax1.set_title("Total Miles by Vehicle")
-        plt.xticks(rotation=30, ha="right")
-        st.pyplot(fig1)
+        # ✅ IMPORTANT: pass bytes, not BytesIO
+        excel_bytes = master_excel.getvalue()
+        dbg("Master Excel built", {"bytes_len": len(excel_bytes)})
 
-
-
-    # --- 2) Pie charts: Commute vs Business miles for each vehicle ---
-    st.markdown("**Commute vs Business Miles by Vehicle (Pie Charts)**")
-
-    num_vehicles = len(filtered_summary)
-    if num_vehicles > 0:
-        # Decide grid layout (3 columns, N rows)
-        cols = 3
-        rows = (num_vehicles + cols - 1) // cols  # ceiling division
-
-        fig, axes = plt.subplots(rows, cols, figsize=(cols * 4, rows * 4))
-
-        # axes can be a single Axes if rows*cols == 1
-        if rows * cols == 1:
-            axes = [axes]
-        else:
-            axes = axes.flatten()
-
-        labels = ["Business", "Commute"]
-
-        for ax, (vehicle, row) in zip(axes, filtered_summary.iterrows()):
-            values = [row["Business_Miles"], row["Commute_Miles"]]
-            total = sum(values)
-
-            if total <= 0:
-                ax.text(0.5, 0.5, "No data", ha="center", va="center")
-                ax.set_title(vehicle)
-                ax.axis("off")
-                continue
-
-            ax.pie(
-                values,
-                labels=labels,
-                autopct="%1.1f%%",
-                startangle=90,
-            )
-            ax.set_title(vehicle)
-            ax.axis("equal")  # circular pies
-
-        # Turn off any unused axes (if grid bigger than number of vehicles)
-        for ax in axes[num_vehicles:]:
-            ax.axis("off")
-
-        fig.tight_layout()
-        st.pyplot(fig)
-    else:
-        st.info("No vehicles selected for pie charts.")
-
-    # ---------------------------
-    # Details / Data quality section
-    # ---------------------------
-    st.subheader("Detailed Data")
-
-    tab1, tab2, tab3 = st.tabs(
-        ["All Rows (Prepared)", "Raw Imported Data", "Potential Issues"]
-    )
-
-    with tab1:
-        st.markdown(
-            "This is the fully prepared dataset after column normalization, "
-            "mileage calculation, and commute flagging."
+        st.download_button(
+            label="📥 Download full master Excel report (all drivers, all vehicles)",
+            data=excel_bytes,
+            file_name="mileage_report.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
-        st.dataframe(df_filtered, use_container_width=True)
 
-    with tab2:
-        st.markdown("This is the raw combined DataFrame loaded from all driver Google Sheets.")
-        st.dataframe(raw_df, use_container_width=True)
+        # ---------------------------
+        # Sidebar filters
+        # ---------------------------
+        st.sidebar.header("Filters")
+        st.sidebar.markdown("**Drivers (data sources):**")
+        for name in sources:
+            st.sidebar.write(f"- {name}")
 
-    with tab3:
-        st.markdown("Rows with NaN or negative miles (if any).")
-        issues = df_filtered[~df_filtered["_row_ok"]].copy()
-        if issues.empty:
-            st.success("✅ No row-level issues detected.")
+        # Driver filter
+        if "Driver" in df.columns:
+            driver_list = sorted(df["Driver"].dropna().unique())
         else:
-            st.warning(f"⚠ {len(issues)} issue row(s) found:")
-            st.dataframe(issues, use_container_width=True)
+            driver_list = []
 
+        dbg("Driver list computed", {"driver_list": driver_list})
+
+        selected_drivers = st.sidebar.multiselect("Filter by driver:", driver_list, default=driver_list)
+
+        df_filtered = df.copy()
+        if selected_drivers and "Driver" in df_filtered.columns:
+            df_filtered = df_filtered[df_filtered["Driver"].isin(selected_drivers)]
+
+        dbg("df_filtered after driver filter", {"shape": df_filtered.shape})
+
+        summary_driver = mp.aggregate_by_vehicle(df_filtered)
+        dbg("summary_driver recomputed", {"shape": summary_driver.shape})
+
+        vehicles = sorted(summary_driver.index.tolist())
+        selected_vehicles = st.sidebar.multiselect("Select vehicle(s):", vehicles, default=vehicles)
+
+        if selected_vehicles:
+            filtered_summary = summary_driver.loc[selected_vehicles]
+        else:
+            filtered_summary = summary_driver
+
+        dbg("filtered_summary prepared", {"shape": filtered_summary.shape})
+
+        summary_display = filtered_summary.rename(
+            columns={
+                "Commute_Miles": "Commute Miles",
+                "Business_Miles": "Business Miles",
+                "Total_Miles": "Total Miles",
+            }
+        ).round(2)
+
+        # ---------------------------
+        # Metrics
+        # ---------------------------
+        st.subheader("Overall Mileage Totals")
+
+        total_business = filtered_summary["Business_Miles"].sum()
+        total_commute = filtered_summary["Commute_Miles"].sum()
+        total_miles = filtered_summary["Total_Miles"].sum()
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Business Miles", f"{total_business:,.1f}")
+        col2.metric("Commute Miles", f"{total_commute:,.1f}")
+        col3.metric("Total Miles", f"{total_miles:,.1f}")
+
+        # ---------------------------
+        # Summary table
+        # ---------------------------
+        st.subheader("Mileage Summary by Vehicle")
+        st.dataframe(summary_display, use_container_width=True)
+
+        # ---------------------------
+        # Charts
+        # ---------------------------
+        st.subheader("Charts")
+
+        chart_col1, chart_col2 = st.columns(2)
+
+        with chart_col1:
+            st.markdown("**Total Miles by Vehicle**")
+            fig1, ax1 = plt.subplots()
+            ax1.bar(summary_display.index, summary_display["Total Miles"])
+            ax1.set_ylabel("Miles")
+            ax1.set_xlabel("Vehicle")
+            ax1.set_title("Total Miles by Vehicle")
+            plt.xticks(rotation=30, ha="right")
+            st.pyplot(fig1)
+
+        st.markdown("**Commute vs Business Miles by Vehicle (Pie Charts)**")
+
+        num_vehicles = len(filtered_summary)
+        if num_vehicles > 0:
+            cols = 3
+            rows = (num_vehicles + cols - 1) // cols
+
+            fig, axes = plt.subplots(rows, cols, figsize=(cols * 4, rows * 4))
+
+            if rows * cols == 1:
+                axes = [axes]
+            else:
+                axes = axes.flatten()
+
+            labels = ["Business", "Commute"]
+
+            for ax, (vehicle, row) in zip(axes, filtered_summary.iterrows()):
+                values = [row["Business_Miles"], row["Commute_Miles"]]
+                total = sum(values)
+
+                if total <= 0:
+                    ax.text(0.5, 0.5, "No data", ha="center", va="center")
+                    ax.set_title(vehicle)
+                    ax.axis("off")
+                    continue
+
+                ax.pie(values, labels=labels, autopct="%1.1f%%", startangle=90)
+                ax.set_title(vehicle)
+                ax.axis("equal")
+
+            for ax in axes[num_vehicles:]:
+                ax.axis("off")
+
+            fig.tight_layout()
+            st.pyplot(fig)
+        else:
+            st.info("No vehicles selected for pie charts.")
+
+        # ---------------------------
+        # Details / Data quality
+        # ---------------------------
+        st.subheader("Detailed Data")
+
+        tab1, tab2, tab3 = st.tabs(["All Rows (Prepared)", "Raw Imported Data", "Potential Issues"])
+
+        with tab1:
+            st.markdown(
+                "This is the fully prepared dataset after column normalization, "
+                "mileage calculation, and commute flagging."
+            )
+            st.dataframe(df_filtered, use_container_width=True)
+
+        with tab2:
+            st.markdown("This is the raw combined DataFrame loaded from all driver Google Sheets.")
+            st.dataframe(raw_df, use_container_width=True)
+
+        with tab3:
+            st.markdown("Rows with NaN or negative miles (if any).")
+            if "_row_ok" in df_filtered.columns:
+                issues = df_filtered[~df_filtered["_row_ok"]].copy()
+            else:
+                issues = pd.DataFrame()
+
+            if issues.empty:
+                st.success("✅ No row-level issues detected.")
+            else:
+                st.warning(f"⚠ {len(issues)} issue row(s) found:")
+                st.dataframe(issues, use_container_width=True)
+
+        dbg("main() completed successfully")
+
+    except Exception as e:
+        dbg("FATAL EXCEPTION hit", str(e))
+        st.error("The app crashed. The traceback below shows exactly where.")
+        st.code(traceback.format_exc())
+        st.stop()
 
 if __name__ == "__main__":
     main()
