@@ -35,7 +35,7 @@ DRIVER_SHEET_URLS = {
     "Yuri": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT1qTAuNmBmXRKZqf3AgMfOZRfdcgcstRxgXpucxt2dDzIncMUuLfpLAoTaYnx4j0EbVeT_vbcnZZF8/pub?gid=1436279778&single=true&output=csv",
     "Theresa": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSz4wR34RnDlwsgeikOR2xT9kb6IEhCAC6Vz8mzILs9dAoFGjdd6_PNFl25M2qcOyCZH-BiYPMaHwzP/pub?gid=109890295&single=true&output=csv",
     "Amy": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo8hJXEpCgvzz0CXCk85JBjIoLYfB4J0wy-fHr9UlXtUmFccrVPrjL00WAck563CsEi_1KZ-Ghl-f8/pub?gid=2091739000&single=true&output=csv",
-    "Scott":"https://docs.google.com/spreadsheets/d/e/2PACX-1vRtU7Vr75rc0NV0Ly7IqTAl4v8XraWXyHmtAFGVeXolYG2Z5PsXOek7TKl7pQ6txaQt_oZaKXXbNUeY/pub?gid=270074134&single=true&output=csv"
+    "Scott": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtU7Vr75rc0NV0Ly7IqTAl4v8XraWXyHmtAFGVeXolYG2Z5PsXOek7TKl7pQ6txaQt_oZaKXXbNUeY/pub?gid=270074134&single=true&output=csv",
 }
 
 # ---------------------------
@@ -67,6 +67,30 @@ def dbg(msg: str, data=None):
         if data is not None:
             st.write(data)
 
+
+# ---------------------------
+# NEW: add per-vehicle percentages
+# ---------------------------
+def add_vehicle_percentages(summary_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Adds two per-vehicle percentage columns:
+      - Business_Pct = Business_Miles / Total_Miles
+      - Commute_Pct  = Commute_Miles  / Total_Miles
+
+    Returns a new DataFrame.
+    """
+    out = summary_df.copy()
+
+    if not {"Business_Miles", "Commute_Miles", "Total_Miles"}.issubset(out.columns):
+        raise KeyError("summary_df must contain Business_Miles, Commute_Miles, and Total_Miles.")
+
+    denom = out["Total_Miles"].replace({0: pd.NA})
+    out["Business_Pct"] = (out["Business_Miles"] / denom).fillna(0.0)
+    out["Commute_Pct"] = (out["Commute_Miles"] / denom).fillna(0.0)
+
+    return out
+
+
 # ---------------------------
 # Authentication gate
 # ---------------------------
@@ -86,8 +110,6 @@ st.caption(f"Logged in as: {st.user.email}")
 # ---------------------------
 ALLOWED_EMAILS = {
     "brandonkeithmarkham@gmail.com",
-    "laura.miggins@gmail.com",
-    "jasonlee091488@gmail.com",
     "elderwheelsatx@gmail.com",
     "elderewheelsoffice@gmail.com",
     "sacredrootsaustin@gmail.com",
@@ -102,8 +124,12 @@ if st.user.email not in ALLOWED_EMAILS:
 # ---------------------------
 DEBUG_ALLOWED_EMAILS = {"brandonkeithmarkham@gmail.com"}
 
+
 def can_debug() -> bool:
-    return bool(getattr(st.user, "is_logged_in", False)) and (getattr(st.user, "email", "") in DEBUG_ALLOWED_EMAILS)
+    return bool(getattr(st.user, "is_logged_in", False)) and (
+        getattr(st.user, "email", "") in DEBUG_ALLOWED_EMAILS
+    )
+
 
 # ---------------------------
 # Data loading using your code, but from Google Sheets
@@ -136,9 +162,12 @@ def load_data():
     df = mp.load_and_prepare(raw_df)
     summary = mp.aggregate_by_vehicle(df)
 
-    sources = list(DRIVER_SHEET_URLS.keys())
+    # ✅ NEW: add % columns per vehicle
+    summary = add_vehicle_percentages(summary)
 
+    sources = list(DRIVER_SHEET_URLS.keys())
     return sources, raw_df, df, summary, sheet_errors
+
 
 # ---------------------------
 # Build master Excel workbook (Summary + Details)
@@ -146,7 +175,7 @@ def load_data():
 def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
     """
     Create an in-memory Excel file with:
-      - 'Summary' sheet: aggregated mileage by vehicle
+      - 'Summary' sheet: aggregated mileage by vehicle + per-vehicle %
       - 'Details' sheet: all prepared rows
 
     Styling (via xlsxwriter):
@@ -154,12 +183,19 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
       - Borders around all cells
       - Auto-fit columns
       - Frozen header row
+      - Percent formatting for percent columns
     """
+    # Ensure summary includes % columns (safe if already present)
+    if not {"Business_Pct", "Commute_Pct"}.issubset(summary.columns):
+        summary = add_vehicle_percentages(summary)
+
     summary_export = summary.rename(
         columns={
             "Commute_Miles": "Commute Miles",
             "Business_Miles": "Business Miles",
             "Total_Miles": "Total Miles",
+            "Business_Pct": "Business %",
+            "Commute_Pct": "Commute %",
         }
     )
 
@@ -176,6 +212,7 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
         header_format = workbook.add_format({"bold": True, "bg_color": "#FFFF99", "border": 1})
         cell_border = workbook.add_format({"border": 1})
+        percent_cell = workbook.add_format({"num_format": "0.0%", "border": 1})
 
         def style_sheet(sheet_name: str, data: pd.DataFrame) -> None:
             ws = writer.sheets[sheet_name]
@@ -191,16 +228,19 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
                     col_series.map(len).max() if not col_series.empty else 0,
                     len(str(col_name)),
                 )
-                ws.set_column(col_idx, col_idx, max_len + 2)
+
+                # ✅ NEW: percent formatting for Summary columns
+                if sheet_name == "Summary" and col_name in ("Business %", "Commute %"):
+                    ws.set_column(col_idx, col_idx, max_len + 2, percent_cell)
+                else:
+                    ws.set_column(col_idx, col_idx, max_len + 2)
 
             if n_cols > 0:
                 ws.conditional_format(
-                    0, 0, n_rows, n_cols - 1,
-                    {"type": "no_blanks", "format": cell_border},
+                    0, 0, n_rows, n_cols - 1, {"type": "no_blanks", "format": cell_border}
                 )
                 ws.conditional_format(
-                    0, 0, n_rows, n_cols - 1,
-                    {"type": "blanks", "format": cell_border},
+                    0, 0, n_rows, n_cols - 1, {"type": "blanks", "format": cell_border}
                 )
 
         style_sheet("Summary", summary_df)
@@ -208,6 +248,7 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
 
     buffer.seek(0)
     return buffer
+
 
 def main():
     st.title("🚗 Mileage Dashboard")
@@ -227,7 +268,6 @@ def main():
                 st.markdown("**Debug log:**")
                 st.code("\n".join(st.session_state.debug_log[-250:]))
     else:
-        # Force debug off for everyone else
         st.session_state.DEBUG_MODE = False
 
     try:
@@ -240,15 +280,17 @@ def main():
         dbg("Calling load_data()")
         sources, raw_df, df, summary, sheet_errors = load_data()
 
-        dbg("load_data() returned", {
-            "sources": sources,
-            "raw_df_shape": raw_df.shape if raw_df is not None else None,
-            "df_shape": df.shape if df is not None else None,
-            "summary_shape": summary.shape if summary is not None else None,
-            "sheet_errors_count": len(sheet_errors),
-        })
+        dbg(
+            "load_data() returned",
+            {
+                "sources": sources,
+                "raw_df_shape": raw_df.shape if raw_df is not None else None,
+                "df_shape": df.shape if df is not None else None,
+                "summary_shape": summary.shape if summary is not None else None,
+                "sheet_errors_count": len(sheet_errors),
+            },
+        )
 
-        # Only show sheet load errors to admin in debug mode
         if sheet_errors and can_debug() and st.session_state.get("DEBUG_MODE", False):
             st.warning("Some driver sheets failed to load (admin view).")
             st.write(sheet_errors)
@@ -266,14 +308,13 @@ def main():
         dbg("Building master Excel")
         master_excel = build_master_excel(df, summary)
 
-        # ✅ pass bytes, not BytesIO
         excel_bytes = master_excel.getvalue()
         dbg("Master Excel built", {"bytes_len": len(excel_bytes)})
 
         st.download_button(
             label="📥 Download full master Excel report (all drivers, all vehicles)",
             data=excel_bytes,
-            file_name="mileage_report.xlsx",
+            file_name="ElderWheels_Mileage_Report_2025.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
 
@@ -285,7 +326,6 @@ def main():
         for name in sources:
             st.sidebar.write(f"- {name}")
 
-        # Driver filter
         if "Driver" in df.columns:
             driver_list = sorted(df["Driver"].dropna().unique())
         else:
@@ -302,7 +342,10 @@ def main():
         dbg("df_filtered after driver filter", {"shape": df_filtered.shape})
 
         summary_driver = mp.aggregate_by_vehicle(df_filtered)
-        dbg("summary_driver recomputed", {"shape": summary_driver.shape})
+        # ✅ NEW: add % columns to filtered summary too
+        summary_driver = add_vehicle_percentages(summary_driver)
+
+        dbg("summary_driver recomputed (+pct)", {"shape": summary_driver.shape})
 
         vehicles = sorted(summary_driver.index.tolist())
         selected_vehicles = st.sidebar.multiselect("Select vehicle(s):", vehicles, default=vehicles)
@@ -314,13 +357,26 @@ def main():
 
         dbg("filtered_summary prepared", {"shape": filtered_summary.shape})
 
+        # Display table (rename + formatting)
         summary_display = filtered_summary.rename(
             columns={
                 "Commute_Miles": "Commute Miles",
                 "Business_Miles": "Business Miles",
                 "Total_Miles": "Total Miles",
+                "Business_Pct": "Business %",
+                "Commute_Pct": "Commute %",
             }
-        ).round(2)
+        ).copy()
+
+        # Round miles
+        for c in ("Commute Miles", "Business Miles", "Total Miles"):
+            if c in summary_display.columns:
+                summary_display[c] = summary_display[c].round(2)
+
+        # Show percents as 0-100 in the dashboard table (Excel export stays 0-1 with % formatting)
+        for c in ("Business %", "Commute %"):
+            if c in summary_display.columns:
+                summary_display[c] = (summary_display[c] * 100).round(1)
 
         # ---------------------------
         # Metrics
@@ -433,14 +489,13 @@ def main():
     except Exception as e:
         dbg("FATAL EXCEPTION hit", str(e))
 
-        # Client-safe message
         st.error("Something went wrong. Please contact Brandon for support.")
 
-        # Only show traceback to admin when debug toggle is enabled
         if can_debug() and st.session_state.get("DEBUG_MODE", False):
             st.code(traceback.format_exc())
 
         st.stop()
+
 
 if __name__ == "__main__":
     main()
