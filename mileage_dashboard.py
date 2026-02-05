@@ -228,13 +228,14 @@ def build_master_excel(df: pd.DataFrame, summary: pd.DataFrame) -> io.BytesIO:
                     col_series.map(len).max() if not col_series.empty else 0,
                     len(str(col_name)),
                 )
+                ws.set_column(col_idx, col_idx, max_len + 2)
 
-                # ✅ NEW: percent formatting for Summary columns
                 if sheet_name == "Summary" and col_name in ("Business %", "Commute %"):
-                    ws.set_column(col_idx, col_idx, max_len + 2, percent_cell)
-                else:
-                    ws.set_column(col_idx, col_idx, max_len + 2)
-
+                    ws.conditional_format(
+                        1, col_idx, n_rows, col_idx,
+                        {"type": "no_blanks", "format": workbook.add_format({"num_format": "0.0%"})}
+                    )
+               
             if n_cols > 0:
                 ws.conditional_format(
                     0, 0, n_rows, n_cols - 1, {"type": "no_blanks", "format": cell_border}
