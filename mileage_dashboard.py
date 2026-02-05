@@ -31,9 +31,11 @@ import time
 # Driver → Google Sheet (published CSV) mapping
 # ---------------------------
 DRIVER_SHEET_URLS = {
-    "Matthew": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGcp1pt0bM4eKOdeUIn7jp4PIiuVf5Q2snBk8Tr9fc0kQg553-tObI58fyH4fcozmd3WgYwF6RJcJk/pub?gid=0&single=true&output=csv",
-    "Yuri": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKC_Kj5Jbravp-RpmOOeZd_JxVQug1Jq4mt1gCYFIRL88GPO8fEwNCaooH47rGJTKdKjD18ceHF9TU/pub?gid=0&single=true&output=csv",
-    "Theresa": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoqxBfrk20Hlb-foWIhLqBQwYDoYQzJ7XUKnScd5WjxM5XHr5MmBGECkCAh62oq3zXI3tMxkVLFgMP/pub?gid=0&single=true&output=csv",
+    "Matthew": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSU_J201N5H6rYm0nHh8_Cd1AF-eKAmFIsyrJgNLScdPuMOKW5o0FnVcbBmIvYwYltNmhqCpcvjQvr_/pub?gid=2101586830&single=true&output=csv",
+    "Yuri": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT1qTAuNmBmXRKZqf3AgMfOZRfdcgcstRxgXpucxt2dDzIncMUuLfpLAoTaYnx4j0EbVeT_vbcnZZF8/pub?gid=1436279778&single=true&output=csv",
+    "Theresa": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSz4wR34RnDlwsgeikOR2xT9kb6IEhCAC6Vz8mzILs9dAoFGjdd6_PNFl25M2qcOyCZH-BiYPMaHwzP/pub?gid=109890295&single=true&output=csv",
+    "Amy": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo8hJXEpCgvzz0CXCk85JBjIoLYfB4J0wy-fHr9UlXtUmFccrVPrjL00WAck563CsEi_1KZ-Ghl-f8/pub?gid=2091739000&single=true&output=csv",
+    "Scott":"https://docs.google.com/spreadsheets/d/e/2PACX-1vRtU7Vr75rc0NV0Ly7IqTAl4v8XraWXyHmtAFGVeXolYG2Z5PsXOek7TKl7pQ6txaQt_oZaKXXbNUeY/pub?gid=270074134&single=true&output=csv"
 }
 
 # ---------------------------

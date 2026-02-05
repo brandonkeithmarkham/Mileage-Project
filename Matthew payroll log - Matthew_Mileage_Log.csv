@@ -292,3 +292,5 @@ Date,Vehicle ,Start Mileage,End Mileage,Total Mileage,Mileage Type
 10/9/2025,Emily,27198,27246,48,travel
 10/9/2025,Emily,27246,27300,54,Whirtrhead
 10/9/2025,Emily,27300,27326,26,commute
+11/20/2025,Dave,69082,69102,20,commute
+11/20/2025,Dave,69102,69136,34,unspecified

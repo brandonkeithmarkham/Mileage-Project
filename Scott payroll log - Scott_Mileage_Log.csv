@@ -1,0 +1,675 @@
+Date,Vehicle,Start Mileage,End Mileage,Total Mileage,Mileage Type 
+1/3/25,Maria,107022,107030,8,commute
+1/3/25,Maria,107030,107054,24,Jack
+1/3/25,Maria,107054,107067,13,commute
+1/7/25,Maria,107067,107086,19,commute
+1/7/25,Maria,107086,107087,1,Andrew/Hope
+1/7/25,Maria,107087,107112,25,commute
+1/7/25,Maria,107112,107129,17,commute
+1/7/25,Maria,107129,107130,1,Andrew/Hope
+1/7/25,Maria,107130,107149,19,commute + gas + track down cards left by Elsa at Hope's house
+1/8/25,Maria,107149,107159,10,commute
+1/8/25,Maria,107159,107170,11,Don
+1/8/25,Maria,107170,107187,17,commute + go to Amy's to get more petty cash for Maria van
+1/10/25,Maria,107187,107191,4,commute
+1/10/25,Maria,107191,107208,17,Tina
+1/10/25,Maria,107208,107215,7,commute
+1/14/25,Maria,107215,107226,11,commute
+1/14/25,Maria,107226,107260,34,Don/Ronald - $13.50 tip + $30 after 5pm fee
+1/14/25,Maria,107260,107266,6,commute
+1/15/25,Maria,107266,107278,12,commute
+1/15/25,Maria,107278,107289,11,Don
+1/15/25,Maria,107289,107309,20,commute
+1/15/25,Maria,107309,107325,16,commute
+1/15/25,Maria,107325,107368,43,Mary/Don
+1/15/25,Maria,107368,107380,12,commute
+1/16/25,Maria,107380,107394,14,commute
+1/16/25,Maria,107394,107401,7,Elfie
+1/16/25,Maria,107401,107415,14,commute
+1/16/25,Maria,107415,107418,3,commute
+1/16/25,Maria,107418,107429,11,Jack
+1/16/25,Maria,107429,107436,7,commute + gas
+1/22/25,Maria,107436,107448,12,commute
+1/22/25,Maria,107448,107459,11,Don
+1/22/25,Maria,107459,107469,10,commute
+1/22/25,Maria,107469,107473,4,commute
+1/22/25,Maria,107473,107480,7,Carol
+1/22/25,Maria,107480,107485,5,commute
+1/22/25,Maria,107485,107495,10,commute
+1/22/25,Maria,107495,107506,11,Don
+1/22/25,Maria,107506,107518,12,commute
+1/30/25,Maria,107518,107531,13,commute
+1/30/25,Maria,107531,107572,41,Cynthia
+1/30/25,Maria,107572,107586,14,commute
+1/30/25,Maria,107586,107604,18,commute
+1/30/25,Maria,107604,107606,2,Cynthia McCall
+1/30/25,Maria,107606,107625,19,commute
+2/1/25,Maria,107625,107655,30,commute
+2/1/25,Maria,107655,107684,29,John; weekend surcharge
+2/1/25,Maria,107684,107714,30,commute + gas
+2/4/25,Adrienne,33279,33292,13,"In ""Adrienne"" Kia; dropped off to Elsa"
+2/4/25,Maria,107828,107842,14,"In ""Maria"" van again; commute to Cedar Park"
+2/4/25,Maria,107842,107865,23,"Claudia, Cindy"
+2/4/25,Maria,107865,107880,15,commmute
+2/5/25,Maria,107865,107888,23,commmute
+2/5/25,Maria,107888,107903,15,Jack
+2/5/25,Maria,107903,107912,9,commute + RainX/clean vehicle
+2/5/25,Maria,107912,107927,15,commmute
+2/5/25,Maria,107927,107958,31,Vern
+2/5/25,Maria,107958,107973,15,commute + gas
+2/25/25,Maria,108959,108975,16,commute
+2/25/25,Maria,108975,109028,53,Cindy/Greg
+2/25/25,Maria,109028,109036,8,commute
+2/26/25,Maria,109036,109045,9,commute
+2/26/25,Maria,109045,109063,18,"Jack - includes having to wait for 45 mins for appt to end (was told to arrive at 2:10, didn't get out of appt till 2:55)"
+2/26/25,Maria,109063,109070,7,commute
+2/27/25,Maria,109070,109078,8,commute
+2/27/25,Maria,109078,109141,63,Billie(12.5)/Tina(10.5)
+2/27/25,Maria,109141,109150,9,commute
+3/4/25,Maria,109150,109178,28,commute
+3/4/25,Maria,109178,109255,77,Susan/Doug - subtracted 15 minutes for quick lunch
+3/4/25,Maria,109255,109292,37,commute
+3/6/25,Maria,109292,109300,8,commute
+3/6/25,Maria,109300,109314,14,Thomas
+3/6/25,Maria,109314,109325,11,commute
+3/7/25,Maria,109325,109343,18,commute
+3/7/25,Maria,109343,109374,31,"Leona (includes 20 minutes of talking with Gary about calling 911 to help Leona and waiting for EMS and then the ambulance - basically, comforting Gary and keeping him calm) "
+3/7/25,Maria,109374,109392,18,commute
+3/8/25,Maria,109392,109399,7,commute
+3/8/25,Maria,109399,109401,2,Barbara
+3/8/25,Maria,109401,109409,8,commute
+3/8/25,Maria,109409,109416,7,commute
+3/8/25,Maria,109416,109418,2,Barbara (weekend + after hours fees)
+3/8/25,Maria,109418,109427,9,commute + car wash + gas
+3/12/25,Maria,109427,109438,11,commute
+3/12/25,Maria,109438,109441,3,
+3/12/25,Maria,109441,109452,11,commute
+3/12/25,Maria,109452,109459,7,commute
+3/12/25,Maria,109459,109465,6,
+3/12/25,Maria,109465,109474,9,commute
+3/13/25,Maria,109474,109490,16,commute
+3/13/25,Maria,109490,109510,20,Juan/Linda
+3/13/25,Maria,109510,109516,6,commute
+3/13/25,Maria,109516,109523,7,commute
+3/13/25,Maria,109523,109533,10,Jack
+3/13/25,Maria,109533,109537,4,commute
+3/13/25,Maria,109537,109542,5,commute
+3/13/25,Maria,109542,109545,3,Linda
+3/13/25,Maria,109545,109553,8,commute
+3/13/25,Maria,109553,109556,3,commute
+3/13/25,Maria,109556,109568,12,Jack
+3/13/25,Maria,109568,109575,7,commute
+3/14/25,Maria,109575,109580,5,commute
+3/14/25,Maria,109580,109583,3,Howard
+3/14/25,Maria,109583,109602,19,Drive to Mobility Works in Buda; wait for Amy to arrive; talk to folks at shop; drive back to house w/ Amy
+3/18/25,Maria,109602,109619,17,NOTE: I can't account for these miles - the van was dropped off at Mobility Works with 109602 miles - these miles were put on by the staff at Mobility Works
+3/18/25,Maria,109619,109633,14,Drive w/ Amy to Buda to pick up Maria van at MobileWorks; wait for staff to get vehicle ready; drive home
+3/19/25,Maria,109633,109647,14,commute
+3/19/25,Maria,109647,109656,9,Elfie
+3/19/25,Maria,109656,109677,21,commute + gas
+3/20/25,Maria,109677,109687,10,commute
+3/20/25,Maria,109687,109713,26,Floyd
+3/20/25,Maria,109713,109731,18,commute
+3/20/25,Maria,109731,109742,11,commute
+3/20/25,Maria,109742,109751,9,Arthur and Steven
+3/20/25,Maria,109751,109769,18,commute
+3/21/25,Maria,109769,109779,10,commute - 7 minutes added for aborted ride for Lisa after I had left house - $25 in tips is for 1/2 of cancellation fee
+3/21/25,Maria,109779,109785,6,George
+3/21/25,Maria,109785,109797,12,commute
+3/21/25,Maria,109797,109819,22,commute
+3/21/25,Maria,109819,109839,20,Terry
+3/21/25,Maria,109839,109861,22,commute
+3/25/25,Maria,110032,110055,23,commute
+3/25/25,Maria,110055,110117,62,Dawn
+3/25/25,Maria,110117,110147,30,commute
+3/26/25,Maria,110147,110159,12,"Drive Maria to MobilityWorks for additional work, explain issues to staff, drive home w/ Amy"
+4/1/25,Maria,110181,110208,27,commute
+4/1/25,Maria,110208,110222,14,Cindy
+4/1/25,Maria,110222,110244,22,commute + bat removal!
+4/2/25,Maria,110244,110257,13,commute
+4/2/25,Maria,110257,110286,29,Susan
+4/2/25,Maria,110286,110299,13,commute + gas
+4/3/25,Maria,110299,110304,5,commute
+4/3/25,Maria,110304,110328,24,commute to Kyle
+4/3/25,Maria,110328,110328,0,Gerry/Mike/Regina - trip aborted b/c Mike needed a wheelchair to be transported and they didn't have one (we didn't know this was needed) - stayed out there a bit and had Elsa talk to them as well
+4/3/25,Maria,110328,110349,21,commute
+4/9/25,Adrienne,34923,34929,6,commute
+4/9/25,Adrienne,34929,34979,50,Brenda
+4/9/25,Adrienne,34979,34986,7,client
+4/9/25,Adrienne,34986,34992,6,Discount Tire (replace 2 tires)/commute
+4/11/25,Adrienne,34992,34997,5,commute
+4/11/25,Adrienne,34997,35010,13,Howard/Stephen
+4/11/25,Adrienne,35010,35019,9,commute
+4/11/25,Adrienne,35019,35027,8,commute
+4/11/25,Adrienne,35027,35028,1,Brenda
+4/11/25,Adrienne,35028,35036,8,commute
+4/11/25,Adrienne,35036,35045,9,commute
+4/11/25,Jim,119991,119995,4,Howard
+4/11/25,Jim,119995,120001,6,commute
+4/15/25,Jim,120001,120011,10,commute
+4/15/25,Jim,120011,120021,10,Kathy
+4/15/25,Jim,120021,120024,3,commute
+4/16/25,Jim,120024,120035,11,commute
+4/16/25,Jim,120035,120036,1,Daryl (he got his days confused and wasn't dresse dor ready to go)
+4/16/25,Jim,120036,120038,2,commute
+4/16/25,Jim,120038,120040,2,commute
+4/16/25,Jim,120040,120041,1,Daryl
+4/16/25,Jim,120041,120053,12,commute
+4/16/25,Jim,120053,120060,7,commute
+4/16/25,Jim,120060,120098,38,Nulu
+4/16/25,Jim,120098,120105,7,commute
+4/17/25,Jim,120105,120109,4,commute
+4/17/25,Jim,120109,120117,8,Tina
+4/17/25,Jim,120117,120121,4,commute
+4/20/25,Jim,120121,120137,16,commute
+4/20/25,Jim,120137,120149,12,Jim
+4/20/25,Jim,120149,120181,32,commute + gas
+4/20/25,Jim,120181,120206,25,commute
+4/20/25,Jim,120206,120216,10,Jim ($141 = $50 weekend + $50 PM ride + $41 tip)
+4/20/25,Jim,120216,120233,17,commute
+4/22/25,Jim,120233,120240,7,commute
+4/22/25,Jim,120240,120250,10,Jack/Juanita
+4/22/25,Jim,120250,120254,4,commute
+4/22/25,Jim,120254,120268,14,PERSONAL Ride to Dentist (but had to take van for EW ride immediately after)
+4/22/25,Jim,120268,120281,13,commute
+4/22/25,Jim,120281,120290,9,Jack/Juanita
+4/22/25,Jim,120290,120298,8,commute
+4/23/25,Jim,120298,120304,6,commute
+4/23/25,Jim,120304,120313,9,Stuart
+4/23/25,Jim,120313,120320,7,commute
+4/23/25,Jim,120320,120325,5,commute
+4/23/25,Jim,120325,120331,6,Carol
+4/23/25,Jim,120331,120341,10,commute
+4/24/25,Jim,120341,120357,16,commute
+4/24/25,Jim,120357,120403,46,"Don + Gene (w/ Don, had to wait for him to get an xray and then had trouble locating staff at his residence upon return)"
+4/24/25,Jim,120403,120412,9,commute
+4/29/25,Jim,120412,120427,15,commute
+4/29/25,Jim,120427,120441,14,Cindy
+4/29/25,Jim,120441,120468,27,commute + gas
+4/29/25,Jim,120468,120502,34,commute
+4/29/25,Jim,120502,120540,38,Lisa
+4/29/25,Jim,120540,120575,35,commute
+4/30/25,Jim,120575,120598,23,commute
+4/30/25,Jim,120598,120612,14,Anthony
+4/30/25,Jim,120612,120632,20,commute
+4/30/25,Jim,120632,120649,17,commute
+4/30/25,Jim,120649,120705,56,Charlyne
+4/30/25,Jim,120705,120721,16,commute
+5/2/25,Jim,120721,120725,4,commute
+5/2/25,Jim,120725,120750,25,Tina
+5/2/25,Jim,120750,120754,4,commute + gas
+5/3/25,Jim,120754,120761,7,commute
+5/3/25,Jim,120761,120768,7,"Barb (roads shut down by her house caused a long, wacky detour) - $25 for weekend fee + tip"
+5/3/25,Jim,120768,120775,7,commute
+5/7/25,Jim,120775,120788,13,commute
+5/7/25,Jim,120788,120799,11,Susan
+5/7/25,Jim,120799,120812,13,commute
+5/8/25,Jim,120812,120815,3,commute
+5/8/25,Jim,120815,120868,53,Jack/Benjamin
+5/8/25,Jim,120868,120906,38,commute
+5/11/25,Jim,120906,120926,20,commute
+5/11/25,Jim,120926,120945,19,Milagros ($100 = weekend + holiday)
+5/11/25,Jim,120945,120980,35,commute
+5/13/25,Jim,120980,120984,4,commute
+5/13/25,Jim,120984,120988,4,Phillip/Rebecca
+5/13/25,Jim,120988,120993,5,commute
+5/14/25,Jim,120993,121015,22,commute
+5/14/25,Jim,121015,121038,23,Daryl/Josels
+5/14/25,Jim,121038,121041,3,commute
+5/14/25,Jim,121041,121056,15,commute
+5/14/25,Jim,121056,121086,30,Cindy
+5/14/25,Jim,121086,121102,16,commute
+5/14/25,Jim,121102,121109,7,commute
+5/14/25,Jim,121109,121112,3,Gene
+5/14/25,Jim,121112,121120,8,commute
+5/15/25,Jim,121120,121125,5,commute
+5/15/25,Jim,121125,121127,2,Carol
+5/15/25,Jim,121127,121130,3,commute
+5/15/25,Jim,121130,121146,16,commute
+5/15/25,Jim,121146,121161,15,Gary
+5/15/25,Jim,121161,121178,17,commute
+5/16/25,Jim,121178,121196,18,commute
+5/16/25,Jim,121196,121258,62,Suzanne/De Lana/Kathy (5.25 from De Lana; 25 from Kathy)
+5/16/25,Jim,121258,121263,5,commute
+5/21/25,Jim,121263,121280,17,commute
+5/21/25,Jim,121280,121330,50,Ruth/drive to PU John R/John R #1
+5/21/25,Jim,121330,121339,9,commute
+5/21/25,Jim,121339,121350,11,commute
+5/21/25,Jim,121350,121372,22,John R #2 ($50 for PM ride)
+5/21/25,Jim,121372,121404,32,commute
+5/22/25,Jim,121404,121419,15,commute
+5/22/25,Jim,121419,121449,30,Cindy/Anthony (13 minutes removed for down time b/w rides); $25 for cancellation 
+5/22/25,Jim,121449,121461,12,commute
+5/27/25,Jim,121461,121473,12,commute
+5/27/25,Jim,121473,121474,1,Daryl
+5/27/25,Jim,121474,121481,7,commute
+5/27/25,Jim,121481,121490,9,commute
+5/27/25,Jim,121490,121491,1,Daryl
+5/27/25,Jim,121491,121503,12,commute
+5/27/25,Jim,121503,121506,3,commute (got stuck behind a train!)
+5/27/25,Jim,121506,121534,28,Martin Vasquez
+5/27/25,Jim,121534,121538,4,commute
+5/28/25,Jim,121538,121549,11,commute
+5/28/25,Jim,121549,121555,6,Joe
+5/28/25,Jim,121555,121571,16,commute
+5/29/25,Jim,121571,121596,25,commute
+5/29/25,Jim,121596,121603,7,Jane
+5/29/25,Jim,121603,121629,26,commute + gas
+6/3/25,Jim,121629,121656,27,commute
+6/3/25,Jim,121656,121710,54,Susan; Phil
+6/3/25,Jim,121710,121738,28,commute
+6/4/25,Jim,121738,121746,8,commute
+6/4/25,Jim,121746,121752,6,Barbara ($50 after hours ride; rest tip)
+6/4/25,Jim,121752,121758,6,Barbara part 2
+6/4/25,Jim,121758,121765,7,commute
+6/5/25,Jim,121765,121772,7,commute
+6/5/25,Jim,121772,121813,41,Jack/Carol
+6/5/25,Jim,121813,121823,10,commute
+6/6/25,Jim,121823,121830,7,commute
+6/6/25,Jim,121830,121854,24,Jack
+6/6/25,Jim,121854,121862,8,commute
+6/7/25,Jim,121862,121874,12,commute - street closure not on GPS causing major reroute and traffic
+6/7/25,Jim,121874,121877,3,Barb #1
+6/7/25,Jim,121877,121888,11,commute + gas (still really bad traffic due to street closures and light outages)
+6/7/25,Jim,121888,121896,8,commute
+6/7/25,Jim,121896,121898,2,Barb #2 ($50 for weekend; the rest is tip)
+6/7/25,Jim,121898,121905,7,commute
+6/10/25,Jim,121905,121911,6,commute
+6/10/25,Jim,121911,121968,57,Donna
+6/10/25,Jim,121968,121973,5,commute
+6/12/25,Jim,121973,121978,5,commute
+6/12/25,Jim,121978,122020,42,Linda/Vern
+6/12/25,Jim,122020,122036,16,commute
+6/13/25,Jim,122036,122041,5,commute
+6/13/25,Jim,122041,122051,10,Kathy
+6/13/25,Jim,122051,122056,5,commute
+6/13/25,Jim,122056,122072,16,commute
+6/13/25,Jim,122072,122079,7,Chadee
+6/13/25,Jim,122079,122095,16,commute
+7/3/24,Emily,31111,31120,9,training/Elsa/commute
+7/3/24,Emily,31121,31123,2,training/Elsa
+7/3/24,Emily,31124,31148,24,training/Elsa/work-related errands w/ Elsa
+7/3/24,Emily,31148,31149,1,training/Elsa
+7/3/24,Emily,31150,31162,12,training/Elsa/commute
+7/8/24,Emily,31224,31226,2,commute
+7/8/24,Emily,31227,31231,4,Carol pickup and dropoff (and wait time at the doctor)
+7/8/24,Emily,31232,31235,3,commute
+7/9/24,Emily,31236,31247,11,commute
+7/9/24,Emily,31248,31261,13,Byron/Joan/training
+7/9/24,Emily,31262,31286,24,commute
+7/10/24,Emily,31287,31332,45,commute to Georgetown
+7/10/24,Emily,31302,31355,53,training/Elsa
+7/10/24,Emily,31356,31399,43,commute back from Georgetown
+7/11/24,Emily,31399,31425,26,commute to Cedar Park
+7/11/24,Emily,31426,31500,74,training/Elsa (Howard/Joan/Nulu) - tip is Nulu + $7 from Joan per Elsa
+7/11/24,Emily,31501,31507,6,commute
+7/12/24,Emily,31507,31521,14,commute
+7/12/24,Emily,31522,31546,24,Altagracia/Andrew Sanchez drives
+7/12/24,Emily,31547,31566,19,commute
+6/17/25,Jim,122095,122098,3,commute
+6/17/25,Jim,122098,122107,9,Eddie
+6/17/25,Jim,122107,122110,3,commute
+6/17/25,Jim,122110,122136,26,commute
+6/17/25,Jim,122136,122150,14,Cindy
+6/17/25,Jim,122150,122176,26,commute + gas + car wash
+6/18/25,Jim,122176,122194,18,commute
+6/18/25,Jim,122194,122215,21,Andrew/DeLana (minus 13 minutes for downtime b/w rides)
+6/18/25,Jim,122215,122253,38,commute
+6/20/25,Jim,122253,122258,5,commute
+6/20/25,Jim,122258,122261,3,Howard
+6/20/25,Jim,122261,122270,9,commute
+6/20/25,Jim,122270,122279,9,commute
+6/20/25,Jim,122279,122299,20,Penny
+6/20/25,Jim,122299,122301,2,commute
+6/21/25,Jim,122301,122326,25,commute
+6/21/25,Jim,122326,122355,29,Jaime ($50 weekend + $30 late ride)
+6/21/25,Jim,122355,122358,3,commute
+6/27/25,Jim,122358,122374,16,commute
+6/27/25,Jim,122374,122379,5,Vern
+6/27/25,Jim,122379,122404,25,commute
+6/29/25,Jim,122404,122415,11,commute
+6/29/25,Jim,122415,122427,12,Spencer (50 weekend + 50 late night)
+6/29/25,Jim,122427,122438,11,commute + gas
+7/1/25,Jim,122438,122445,7,commute
+7/1/25,Jim,122445,122454,9,Kennedy (tire blows out - switch to Dave van)
+7/1/25,Dave,58124,58129,5,Kennedy part 2 in Dave van
+7/1/25,Dave,58129,58205,76,George/Mike/Phil + get gas (-24 minutes for lunch)
+7/1/25,Dave,58205,58230,25,commute
+7/1/25,Dave,58230,58232,2,drive Dave van to Amy's to swap vans
+7/1/25,Jim,122464,122467,3,commute
+7/2/25,Jim,122467,122474,7,commute
+7/2/25,Jim,122474,122510,36,Kennedy/Jack #1 (minus 8 minutes for gap)
+7/2/25,Jim,122510,122519,9,commute
+7/2/25,Jim,122519,122528,9,commute
+7/2/25,Jim,122528,122540,12,Jack #2
+7/2/25,Jim,122540,122548,8,commute
+7/3/25,Jim,122548,122552,4,commute
+7/3/25,Jim,122552,122589,37,Flo (25 for Carol cancellation this afternoon)
+7/3/25,Jim,122589,122592,3,commute
+7/3/25,Jim,122592,122596,4,commute
+7/3/25,Jim,122596,122608,12,Jack
+7/3/25,Jim,122608,122615,7,commute
+7/8/25,Jim,122702,122720,18,commute
+7/8/25,Jim,122720,122723,3,Andrew
+7/8/25,Jim,122723,122748,25,commute
+7/10/25,Jim,122748,122764,16,commute
+7/10/25,Jim,122764,122772,8,Vern
+7/10/25,Jim,122772,122783,11,commute
+7/11/25,Jim,122783,122811,28,commute
+7/11/25,Jim,122811,122828,17,Susan
+7/11/25,Jim,122828,122840,12,commute
+7/14/25,Jim,122840,122844,4,commute
+7/14/25,Jim,122844,122865,21,Tina
+7/14/25,Jim,122865,122868,3,commute
+7/15/25,Jim,122868,122896,28,commute
+7/15/25,Jim,122896,122932,36,Susan
+7/15/25,Jim,122932,122971,39,commute
+7/16/25,Jim,122971,123000,29,commute
+7/16/25,Jim,123000,123036,36,Christi
+7/16/25,Jim,123036,123066,30,commute + gas
+7/18/25,Jim,123066,123093,27,commute
+7/18/25,Jim,123093,123199,106,Judie
+7/18/25,Jim,123199,123233,34,commute
+7/22/25,Jim,123233,123240,7,commute
+7/22/25,Jim,123240,123250,10,Jack #1
+7/22/25,Jim,123250,123254,4,commute
+7/22/25,Jim,123254,123259,5,commute
+7/22/25,Jim,123259,123268,9,Jack #2
+7/22/25,Jim,123268,123284,16,commute
+7/22/25,Jim,123284,123288,4,commute
+7/22/25,Jim,123288,123298,10,Tina
+7/22/25,Jim,123298,123302,4,commute
+7/23/25,Jim,123302,123313,11,commute
+7/23/25,Jim,123313,123344,31,Daryl/drive to Billie/get gas/Billie (-15 mins for downtime)
+7/23/25,Jim,123344,123352,8,commute
+7/25/25,Jim,123352,123362,10,commute
+7/25/25,Jim,123362,123378,16,Ronald
+7/25/25,Jim,123378,123397,19,commute
+7/29/25,Jim,123397,123405,8,commute
+7/29/25,Jim,123405,123418,13,Charles
+7/29/25,Jim,123418,123427,9,commute
+7/30/25,Jim,123427,123432,5,commute
+7/30/25,Jim,123432,123448,16,Kathy
+7/30/25,Jim,123448,123453,5,commute
+7/31/25,Jim,123453,123480,27,commute
+7/31/25,Jim,123480,123486,6,Patel
+7/31/25,Jim,123486,123516,30,commute
+8/1/25,Jim,123516,123550,34,commute
+8/1/25,Jim,123550,123573,23,Lisa
+8/1/25,Jim,123573,123610,37,commute
+8/1/25,Jim,123610,123627,17,commute
+8/1/25,Jim,123627,123657,30,Dick
+8/1/25,Jim,123657,123671,14,commute
+8/5/25,Jim,123671,123687,16,commute
+8/5/25,Jim,123687,123716,29,Cindy
+8/5/25,Jim,123716,123732,16,commute
+8/6/25,Jim,123732,123743,11,commute
+8/6/25,Jim,123743,123744,1,Daryl
+8/6/25,Jim,123744,123755,11,commute
+8/7/25,Jim,123755,123769,14,commute
+8/7/25,Jim,123769,123809,40,Zachary/Susan (-25 minutes for downtime b/w rides); $10 from CaredFor; $5 for SSA
+8/7/25,Jim,123809,123827,18,commute
+8/7/25,Jim,123827,123837,10,get car wash in prep for video shoot that ultimately got cancelled (vacuumed and cleaned interior thoroughly)
+8/12/25,Jim,123859,123885,26,commute + gas
+8/13/25,Jim,123885,123891,6,commute
+8/13/25,Jim,123891,123892,1,Frank and Nina
+8/13/25,Jim,123892,123899,7,commute
+8/13/25,Jim,123899,123917,18,commute
+8/13/25,Jim,123917,123945,28,Andy and Carol (-35 mins for downtime)
+8/13/25,Jim,123945,123952,7,commute
+8/14/25,Jim,123952,123959,7,commute
+8/14/25,Jim,123959,123966,7,Karen/Linda; Rodney (cancel)
+8/14/25,Jim,123966,123972,6,commute
+8/14/25,Jim,123972,123977,5,commute
+8/14/25,Jim,123977,124015,38,Mary
+8/14/25,Jim,124015,124022,7,commute
+8/15/25,Jim,124022,124029,7,commute
+8/15/25,Jim,124029,124033,4,Gene
+8/15/25,Jim,124033,124039,6,commute
+8/19/25,Jim,124066,124082,16,commute
+8/19/25,Jim,124082,124106,24,Doug
+8/19/25,Jim,124106,124149,43,commute + gas
+8/20/25,Jim,124149,124155,6,commute
+8/20/25,Jim,124155,124159,4,transit
+8/20/25,Jim,124159,124167,8,Keith (Brodie Ranch)
+8/20/25,Jim,124167,124177,10,commute
+8/22/25,Jim,124177,124183,6,commute
+8/22/25,Jim,124183,124195,12,Tito
+8/22/25,Jim,124195,124202,7,commute
+8/26/25,Jim,124202,124219,17,commute
+8/26/25,Jim,124219,124231,12,Brent
+8/26/25,Jim,124231,124249,18,commute
+8/27/25,Jim,124249,124253,4,commute
+8/27/25,Jim,124253,124255,2,Carol #1
+8/27/25,Jim,124255,124259,4,commute
+8/27/25,Jim,124259,124262,3,commute
+8/27/25,Jim,124262,124265,3,Carol #2
+8/27/25,Jim,124265,124270,5,commute
+8/27/25,Jim,124270,124279,9,commute
+8/27/25,Jim,124279,124284,5,Zach (50 for after hours + 20 for tip)
+8/27/25,Jim,124284,124294,10,commute
+8/28/25,Jim,124294,124297,3,commute
+8/28/25,Jim,124297,124309,12,Jack
+8/28/25,Jim,124309,124316,7,commute
+8/28/25,Jim,124316,124329,13,commute
+8/28/25,Jim,124329,124347,18,Susan (50 after hours + 22 tip)
+8/28/25,Jim,124347,124375,28,commute
+8/29/25,Jim,124375,124392,17,commute
+8/29/25,Jim,124392,124397,5,Brent
+8/29/25,Jim,124397,124419,22,commute
+8/30/25,Jim,124419,124426,7,commute + gas
+8/30/25,Jim,124426,124429,3,Barb #1
+8/30/25,Jim,124429,124454,25,commute
+8/30/25,Jim,124454,124461,7,commute
+8/30/25,Jim,124461,124463,2,Barb #2 (50 for weekend; 50 for PM; + tip)
+8/30/25,Jim,124463,124472,9,commute
+9/2/25,Jim,124472,124485,13,commute
+9/2/25,Jim,124485,124517,32,Andrew/Doug; -25 mins of downtime
+9/2/25,Jim,124517,124554,37,commute
+9/3/25,Jim,124554,124561,7,commute
+9/3/25,Jim,124561,124630,69,Jack/Mariaelena
+9/3/25,Jim,124630,124638,8,commute
+9/4/25,Jim,124638,124641,3,commute
+9/4/25,Jim,124641,124661,20,Mary
+9/4/25,Jim,124661,124668,7,commute
+9/4/25,Jim,124668,124683,15,commute
+9/4/25,Jim,124683,124690,7,Gary
+9/4/25,Jim,124690,124704,14,commute + gas
+9/5/25,Jim,124704,124737,33,commute
+9/5/25,Jim,124737,124820,83,John/Daryls/Carol - no breaks!  - $20 is a special gift from Elsa for the crazy day for everyone
+9/5/25,Jim,124820,124824,4,commute
+9/5/25,Jim,124824,124827,3,commute
+9/5/25,Jim,124827,124829,2,Carol part 2
+9/5/25,Jim,124829,124835,6,commute
+9/9/25,Jim,124835,124868,33,commute
+9/9/25,Jim,124868,124910,42,Yogi
+9/9/25,Jim,124910,124952,42,commute
+9/10/25,Jim,124952,124963,11,commute (wreck on MOPAC)
+9/10/25,Jim,124963,124980,17,Daryl/Carol (minus 28 mins for lunch)
+9/10/25,Jim,124980,124995,15,commute
+9/10/25,Jim,124995,125002,7,commute
+9/10/25,Jim,125002,125008,6,Gene
+9/10/25,Jim,125008,125015,7,commute + gas
+9/11/25,Jim,125015,125020,5,commute
+9/11/25,Jim,125020,125026,6,Kenn
+9/11/25,Jim,125026,125027,1,commute
+9/12/25,Jim,125027,125034,7,commute
+9/12/25,Jim,125034,125048,14,Diane
+9/12/25,Jim,125048,125056,8,commute
+9/12/25,Jim,125056,125063,7,commute
+9/12/25,Jim,125063,125088,25,Jack
+9/12/25,Jim,125088,125095,7,commute
+9/29/25,Jim,126164,126170,6,Personal errand (my car had a flat tire)
+9/30/25,Jim,126170,126177,7,commute
+9/30/25,Jim,126177,126225,48,Greg/Renee/Gas/Matthew Van Check (minus 15 mins of downtime)
+9/30/25,Jim,126225,126249,24,commute
+9/30/25,Jim,126249,126256,7,commute
+9/30/25,Jim,126256,126284,28,Jack
+9/30/25,Jim,126284,126294,10,commute
+10/1/25,Jim,126294,126301,7,commute
+10/1/25,Jim,126301,126325,24,Tito/Tina (10.12 from Tito; 10.50 from Tina)
+10/1/25,Jim,126325,126328,3,commute
+10/1/25,Jim,126328,126364,36,commute
+10/1/25,Jim,126364,126378,14,Cindy ($10 from Elsa for taking on xtra rides)
+10/1/25,Jim,126378,126394,16,commute
+10/3/25,Jim,126394,126423,29,commute
+10/3/25,Jim,126423,126468,45,Tom
+10/3/25,Jim,126468,126499,31,commute
+10/7/25,Jim,126499,126502,3,commute
+10/7/25,Jim,126502,126505,3,Carol
+10/7/25,Jim,126505,126512,7,commute
+10/7/25,Jim,126512,126519,7,commute + gas
+10/7/25,Jim,126519,126524,5,Jack
+10/7/25,Jim,126524,126527,3,commute
+10/7/25,Jim,126527,126529,2,commute
+10/7/25,Jim,126529,126534,5,Jack (50 for PM ride + tip)
+10/7/25,Jim,126534,126541,7,commute
+10/8/25,Jim,126541,126548,7,commute
+10/8/25,Jim,126548,126553,5,Jack
+10/8/25,Jim,126553,126556,3,commute
+10/8/25,Jim,126556,126585,29,commute
+10/8/25,Jim,126585,126604,19,Susan #1
+10/8/25,Jim,126604,126613,9,commute
+10/8/25,Jim,126613,126623,10,commute
+10/8/25,Jim,126623,126640,17,Susan #2
+10/8/25,Jim,126640,126669,29,commute
+10/9/25,Jim,126669,126676,7,commute
+10/9/25,Jim,126676,126695,19,Andy #1; Linda; Andy #2
+10/9/25,Jim,126695,126702,7,commute
+10/9/25,Jim,126702,126721,19,commute
+10/9/25,Jim,126721,126726,5,Ruth
+10/9/25,Jim,126726,126740,14,commute
+10/10/25,Jim,126740,126755,15,commute
+10/10/25,Jim,126755,126827,72,Dick (15.50) and Andy (15)
+10/10/25,Jim,126827,126846,19,commute+gas+Christian Brothers to drop car+shuttle ride home+work w/ Andy Spheeris over the phone on his credit card situation to take payment for today's ride
+10/11/25,Dave,66040,66046,6,commute
+10/11/25,Dave,66046,66048,2,Barb #1
+10/11/25,Dave,66048,66054,6,commute
+10/11/25,Dave,66061,66067,6,commute + gas
+10/11/25,Dave,66067,66069,2,Barb #2 (50 weekend + 50 PM + 40 tip)
+10/11/25,Dave,66069,66075,6,commute
+10/13/25,Jim,126853,126857,4,getting to Christian Brothers and driving Jim van home
+10/15/25,Jim,126857,126897,40,commute
+10/15/25,Jim,126897,126975,78,Susan (25); Jack (16.50); Elsa approved being paid the waiting time Susan to the ER and Jack due to the crazy day
+10/15/25,Jim,126975,126982,7,commute
+10/16/25,Jim,126982,127012,30,commute
+10/16/25,Jim,127012,127057,45,John Riley
+10/16/25,Jim,127057,127093,36,commute
+10/17/25,Jim,127093,127105,12,commute
+10/17/25,Jim,127105,127105,0,Daryl
+10/17/25,Jim,127105,127123,18,commute
+10/18/25,Jim,127123,127134,11,commute + gas
+10/18/25,Jim,127134,127140,6,Kathy (25 - 1/2 of weekend fee + 35 tip)
+10/18/25,Jim,127140,127147,7,commute
+10/20/25,Jim,127147,127157,10,commute
+10/20/25,Jim,127157,127217,60,Ahfaz (25) and Ruth (24)
+10/20/25,Jim,127217,127242,25,commute
+10/22/25,Jim,127242,127253,11,commute
+10/22/25,Jim,127253,127293,40,Daryl/Linda (-10 mins downtime)
+10/22/25,Jim,127293,127305,12,commute
+10/22/25,Jim,127305,127309,4,commute
+10/22/25,Jim,127309,127311,2,Carol #1
+10/22/25,Jim,127311,127314,3,commute
+10/22/25,Jim,127314,127318,4,commute
+10/22/25,Jim,127318,127321,3,Carol #2
+10/22/25,Jim,127321,127325,4,commute
+10/23/25,Jim,127325,127333,8,commute
+10/23/25,Jim,127333,127345,12,Jack #1
+10/23/25,Jim,127345,127355,10,commute
+10/23/25,Jim,127355,127359,4,commute
+10/23/25,Jim,127359,127371,12,Jack #2
+10/23/25,Jim,127371,127384,13,commute
+10/27/25,Jim,127384,127389,5,commute
+10/27/25,Jim,127389,127390,1,Carol #1
+10/27/25,Jim,127390,127395,5,commute
+10/27/25,Jim,127395,127399,4,commute
+10/27/25,Jim,127399,127401,2,Carol #2
+10/27/25,Jim,127401,127406,5,commute + gas
+10/28/25,Jim,127406,127413,7,commute
+10/28/25,Jim,127413,127468,55,"Dave, Carol (26.25), cancel fee for Cindy; minus 10 mins downtime"
+10/28/25,Jim,127468,127472,4,commute
+10/29/25,Jim,127472,127478,6,commute
+10/29/25,Jim,127478,127519,41,Mariaelena
+10/29/25,Jim,127519,127525,6,commute
+10/30/25,Jim,127525,127532,7,commute
+10/30/25,Jim,127532,127547,15,Jack
+10/30/25,Jim,127547,127554,7,commute
+10/31/25,Jim,127554,127574,20,commute + gas
+10/31/25,Jim,127574,127619,45,Carol Bauer/Jack #1
+10/31/25,Jim,127619,127625,6,commute
+10/31/25,Jim,127625,127629,4,commute
+10/31/25,Jim,127629,127634,5,Jack #2
+10/31/25,Jim,127634,127641,7,commute
+11/5/25,Jim,127641,127650,9,commute
+11/5/25,Jim,127650,127671,21,John Riley/Brian
+11/5/25,Jim,127671,127683,12,commute
+11/6/25,Jim,127683,127687,4,commute
+11/6/25,Jim,127687,127691,4,Carol
+11/6/25,Jim,127691,127696,5,commute
+11/8/25,Jim,127696,127700,4,commute
+11/8/25,Jim,127700,127702,2,Carol #1
+11/8/25,Jim,127702,127706,4,commute
+11/8/25,Jim,127706,127709,3,commute
+11/8/25,Jim,127709,127711,2,Carol #2 (50 weekend+50 7pm pickup+tip)
+11/8/25,Jim,127711,127716,5,commute
+11/10/25,Jim,127716,127730,14,commute
+11/10/25,Jim,127730,127761,31,Dick
+11/10/25,Jim,127761,127785,24,commute + tire inflation (cold weather)
+11/10/25,Jim,127785,127792,7,commute
+11/10/25,Jim,127792,127816,24,Jack
+11/10/25,Jim,127816,127823,7,commute
+11/11/25,Jim,127823,127826,3,commute
+11/11/25,Jim,127826,127852,26,Eddie
+11/11/25,Jim,127852,127855,3,commute
+11/11/25,Jim,127855,127868,13,commute
+11/11/25,Jim,127868,127877,9,"Marilyn (power chair shopping, etc)"
+11/11/25,Jim,127877,127897,20,commute + drop WC at Theresa's + gas
+11/12/25,Jim,127897,127906,9,commute
+11/12/25,Jim,127906,127929,23,Glenn #1
+11/12/25,Jim,127929,127946,17,commute
+11/12/25,Jim,127946,127976,30,commute
+11/12/25,Jim,127976,128019,43,"Helen, Glenn #2 (minus 50 mins downtime)"
+11/12/25,Jim,128019,128028,9,commute
+11/13/25,Jim,128028,128033,5,commute
+11/13/25,Jim,128033,128036,3,Linda
+11/13/25,Jim,128036,128047,11,commute
+11/14/25,Jim,128047,128060,13,drive to MobilityWorks for Jim van maintenance
+11/15/25,Dave,68657,68664,7,commute
+11/15/25,Dave,68664,68672,8,Larry (25 for 1/2 weekend drive + tip)
+11/15/25,Dave,68672,68678,6,commute
+11/18/25,Dave,68955,68971,16,commute
+11/18/25,Dave,68971,68989,18,Dick
+11/18/25,Dave,68989,68991,2,commute
+11/18/25,Jim,128060,128078,18,commute
+11/19/25,Jim,128078,128089,11,commute
+11/19/25,Jim,128089,128090,1,Daryl
+11/19/25,Jim,128090,128107,17,commute
+12/9/25,Jim,128798,128831,33,commute
+12/9/25,Jim,128831,128835,4,Lana + deliver cookies
+12/9/25,Jim,128835,128868,33,commute
+12/10/25,Jim,128868,128897,29,commute
+12/10/25,Jim,128897,128906,9,Helen
+12/10/25,Jim,128906,128945,39,commute
+12/10/25,Jim,128945,128951,6,commute
+12/10/25,Jim,128951,129006,55,Donna
+12/10/25,Jim,129006,129011,5,commute + gas
+12/12/25,Jim,129011,129020,9,commute
+12/12/25,Jim,129020,129033,13,commute
+12/16/25,Jim,129033,129043,10,commute
+12/16/25,Jim,129043,129067,24,Brian ($5) + drive to Tina + Tina ($50 for PM ride + $19 tip)
+12/16/25,Jim,129067,129071,4,commute
+12/18/25,Jim,129071,129078,7,commute
+12/18/25,Jim,129078,129088,10,Jack #1
+12/18/25,Jim,129088,129091,3,commute
+12/18/25,Jim,129091,129095,4,commute
+12/18/25,Jim,129095,129128,33,26.25 from Jack #2; 2.50 from Susan; includes waiting time for Susan that Elsa requested from me
+12/18/25,Jim,129128,129145,17,commute
+12/19/25,Jim,129145,129161,16,commute
+12/19/25,Jim,129161,129168,7,Maravilla funeral #1
+12/19/25,Jim,129168,129173,5,commute
+12/19/25,Jim,129173,129178,5,commute
+12/19/25,Jim,129178,129185,7,Maravilla funeral #2
+12/19/25,Jim,129185,129201,16,commute + gas
+12/30/25,Jim,129201,129255,54,commute
+12/30/25,Jim,129255,129296,41,unspecifed
+12/30/25,Jim,129296,129351,55,commute
